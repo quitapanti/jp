@@ -1,10 +1,387 @@
+<!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    <h1 style="text-align: center;">ปิดปรับปรุงเวบไซต์</h1>
-</body></html>
+	<head>
+		<!-- Basic Meta -->
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta name="author" content="Jimmprint" />
+		<meta
+			name="description"
+			content="ร้านพิมพ์งานสถาปัตย์ งานขนาดใหญ่ ตรงข้ามพาต้าปิ่นเกล้า"
+		/>
+		<title>Jimm Print</title>
+
+		<!-- Favicon -->
+		<link rel="shortcut icon" type="image/png" href="favicon.png" />
+
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Krub&display=swap"
+			rel="stylesheet"
+		/>
+		<link rel="stylesheet" href="index.css" />
+	</head>
+	<body class="color__background">
+		<nav class="nav">
+			<a href="/" class="color__2 nav__link" data-link>Home</a>
+			<a href="../privacy-policy.html" class="color__2 nav__link" data-link
+				>Privacy Policy</a
+			>
+		</nav>
+
+		<div class="maincontainer text__center">
+			<h1 class="color__1 maintext">ปิดปรับปรุงเวบไซต์</h1>
+			<br /><br />
+			<h1 class="color__2">ร้านยังเปิดปกติ</h1>
+			<br />
+			<h1 class="color__2">ติดต่อเราได้ที่ช่องทางเหล่านี้</h1>
+		</div>
+		<footer>
+			<div class="socialcontentcontainer">
+				<div class="socialcontent" data-tab="map">
+					<svg
+						class="social-icon"
+						xmlns="http://www.w3.org/2000/svg"
+						xmlns:xlink="http://www.w3.org/1999/xlink"
+						aria-hidden="true"
+						role="img"
+						width="27px"
+						height="36px"
+						preserveAspectRatio="xMidYMid meet"
+						viewBox="0 0 384 512"
+					>
+						<path
+							d="M172.268 501.67C26.97 291.031 0 269.413 0 192C0 85.961 85.961 0 192 0s192 85.961 192 192c0 77.413-26.97 99.031-172.268 309.67c-9.535 13.774-29.93 13.773-39.464 0zM192 272c44.183 0 80-35.817 80-80s-35.817-80-80-80s-80 35.817-80 80s35.817 80 80 80z"
+							fill="currentColor"
+						/>
+					</svg>
+					<p id="map" class="content-text">
+						176/5<br />ซ.สมเด็จพระปิ่นเกล้า 19 อรุณอมรินทร์ บางกอกน้อย กรุงเทพฯ
+						10700
+					</p>
+					<div class="buttonwrap">
+						<button id="copymap">Copy</button>
+						<button
+							onclick=" window.open('https://goo.gl/maps/ey1CJpm6z2xhcqJ57','_blank')"
+						>
+							Open in maps
+						</button>
+					</div>
+				</div>
+				<div class="socialcontent" data-tab="email">
+					<svg
+						class="social-icon"
+						data-for-tab="gmail"
+						xmlns="http://www.w3.org/2000/svg"
+						xmlns:xlink="http://www.w3.org/1999/xlink"
+						aria-hidden="true"
+						role="img"
+						width="36"
+						height="36"
+						preserveAspectRatio="xMidYMid meet"
+						viewBox="0 0 24 24"
+					>
+						<path
+							d="M20 18h-2V9.25L12 13L6 9.25V18H4V6h1.2l6.8 4.25L18.8 6H20m0-2H4c-1.11 0-2 .89-2 2v12a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2z"
+							fill="currentColor"
+						/>
+					</svg>
+					<p id="email" class="content-text">jimmprint.pinklao@gmail.com</p>
+					<div class="buttonwrap">
+						<button id="copyemail">Copy</button>
+						<button
+							onclick=" window.open('mailto:jimmprint.pinklao@gmail.com','_blank')"
+						>
+							Open with email
+						</button>
+					</div>
+				</div>
+				<div class="socialcontent" data-tab="phone">
+					<svg
+						class="social-icon"
+						data-for-tab="phone"
+						xmlns="http://www.w3.org/2000/svg"
+						xmlns:xlink="http://www.w3.org/1999/xlink"
+						aria-hidden="true"
+						role="img"
+						width="36"
+						height="36"
+						preserveAspectRatio="xMidYMid meet"
+						viewBox="0 0 24 24"
+					>
+						<path
+							d="M6.62 10.79c1.44 2.83 3.76 5.15 6.59 6.59l2.2-2.2c.28-.28.67-.36 1.02-.25c1.12.37 2.32.57 3.57.57a1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.25.2 2.45.57 3.57c.11.35.03.74-.25 1.02l-2.2 2.2z"
+							fill="currentColor"
+						/>
+					</svg>
+					<p id="phone" class="content-text">0840257778</p>
+					<div class="buttonwrap">
+						<button id="copyphone">Copy</button>
+						<button onclick="window.open('tel:66840257778','_blank')">
+							Call
+						</button>
+					</div>
+				</div>
+				<div class="socialcontent" data-tab="messenger">
+					<svg
+						class="social-icon"
+						xmlns="http://www.w3.org/2000/svg"
+						xmlns:xlink="http://www.w3.org/1999/xlink"
+						aria-hidden="true"
+						role="img"
+						width="36"
+						height="36"
+						preserveAspectRatio="xMidYMid meet"
+						viewBox="0 0 24 24"
+					>
+						<path
+							d="M12 2C6.36 2 2 6.13 2 11.7c0 2.91 1.19 5.44 3.14 7.17c.16.13.26.35.27.57l.05 1.78c.04.57.61.94 1.13.71l1.98-.87c.17-.06.36-.09.53-.06c.9.27 1.9.4 2.9.4c5.64 0 10-4.13 10-9.7C22 6.13 17.64 2 12 2m6 7.46l-2.93 4.67c-.47.73-1.47.92-2.17.37l-2.34-1.73a.6.6 0 0 0-.72 0l-3.16 2.4c-.42.33-.97-.17-.68-.63l2.93-4.67c.47-.73 1.47-.92 2.17-.4l2.34 1.76a.6.6 0 0 0 .72 0l3.16-2.4c.42-.33.97.17.68.63z"
+							fill="currentColor"
+						/>
+					</svg>
+					<p id="messenger" class="content-text">m.me/jimmprint</p>
+					<div class="buttonwrap">
+						<button id="copymessenger">Copy</button>
+						<button onclick=" window.open('https://m.me/jimmprint','_blank')">
+							Open in messenger
+						</button>
+					</div>
+				</div>
+				<div class="socialcontent" data-tab="facebook">
+					<svg
+						class="social-icon"
+						xmlns="http://www.w3.org/2000/svg"
+						xmlns:xlink="http://www.w3.org/1999/xlink"
+						aria-hidden="true"
+						role="img"
+						width="36"
+						height="36"
+						preserveAspectRatio="xMidYMid meet"
+						viewBox="0 0 24 24"
+					>
+						<path
+							d="M12 2.04c-5.5 0-10 4.49-10 10.02c0 5 3.66 9.15 8.44 9.9v-7H7.9v-2.9h2.54V9.85c0-2.51 1.49-3.89 3.78-3.89c1.09 0 2.23.19 2.23.19v2.47h-1.26c-1.24 0-1.63.77-1.63 1.56v1.88h2.78l-.45 2.9h-2.33v7a10 10 0 0 0 8.44-9.9c0-5.53-4.5-10.02-10-10.02z"
+							fill="currentColor"
+						/>
+					</svg>
+					<p id="facebook" class="content-text">facebook.com/jimmprint</p>
+					<div class="buttonwrap">
+						<button id="copyfacebook">Copy</button>
+						<button
+							onclick=" window.open('https://facebook.com/jimmprint','_blank')"
+						>
+							Open
+						</button>
+					</div>
+				</div>
+				<div class="socialcontent" data-tab="line">
+					<svg
+						class="social-icon"
+						xmlns="http://www.w3.org/2000/svg"
+						xmlns:xlink="http://www.w3.org/1999/xlink"
+						aria-hidden="true"
+						role="img"
+						width="27px"
+						height="36px"
+						preserveAspectRatio="xMidYMid meet"
+						viewBox="0 0 384 512"
+					>
+						<path
+							d="M172.268 501.67C26.97 291.031 0 269.413 0 192C0 85.961 85.961 0 192 0s192 85.961 192 192c0 77.413-26.97 99.031-172.268 309.67c-9.535 13.774-29.93 13.773-39.464 0zM192 272c44.183 0 80-35.817 80-80s-35.817-80-80-80s-80 35.817-80 80s35.817 80 80 80z"
+							fill="currentColor"
+						/>
+					</svg>
+					<img src="lineqr.png" alt="line" style="display: inline" />
+					<p id="line" class="content-text">@596ysfkn</p>
+					<div class="buttonwrap">
+						<button id="copyline">Copy</button>
+						<button onclick=" window.open('https://lin.ee/zJuSeeB','_blank')">
+							Open
+						</button>
+					</div>
+				</div>
+			</div>
+			<div class="socialwrapwrap">
+				<div class="socialwrap">
+					<div class="social">
+						<svg
+							class="social-icon"
+							data-for-tab="map"
+							xmlns="http://www.w3.org/2000/svg"
+							xmlns:xlink="http://www.w3.org/1999/xlink"
+							aria-hidden="true"
+							role="img"
+							width="27px"
+							height="36px"
+							preserveAspectRatio="xMidYMid meet"
+							viewBox="0 0 384 512"
+						>
+							<path
+								d="M172.268 501.67C26.97 291.031 0 269.413 0 192C0 85.961 85.961 0 192 0s192 85.961 192 192c0 77.413-26.97 99.031-172.268 309.67c-9.535 13.774-29.93 13.773-39.464 0zM192 272c44.183 0 80-35.817 80-80s-35.817-80-80-80s-80 35.817-80 80s35.817 80 80 80z"
+								fill="currentColor"
+							/>
+						</svg>
+						<svg
+							class="social-icon"
+							data-for-tab="email"
+							xmlns="http://www.w3.org/2000/svg"
+							xmlns:xlink="http://www.w3.org/1999/xlink"
+							aria-hidden="true"
+							role="img"
+							width="36"
+							height="36"
+							preserveAspectRatio="xMidYMid meet"
+							viewBox="0 0 24 24"
+						>
+							<path
+								d="M20 18h-2V9.25L12 13L6 9.25V18H4V6h1.2l6.8 4.25L18.8 6H20m0-2H4c-1.11 0-2 .89-2 2v12a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2z"
+								fill="currentColor"
+							/>
+						</svg>
+						<svg
+							class="social-icon"
+							data-for-tab="phone"
+							xmlns="http://www.w3.org/2000/svg"
+							xmlns:xlink="http://www.w3.org/1999/xlink"
+							aria-hidden="true"
+							role="img"
+							width="36"
+							height="36"
+							preserveAspectRatio="xMidYMid meet"
+							viewBox="0 0 24 24"
+						>
+							<path
+								d="M6.62 10.79c1.44 2.83 3.76 5.15 6.59 6.59l2.2-2.2c.28-.28.67-.36 1.02-.25c1.12.37 2.32.57 3.57.57a1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.25.2 2.45.57 3.57c.11.35.03.74-.25 1.02l-2.2 2.2z"
+								fill="currentColor"
+							/>
+						</svg>
+					</div>
+					<div class="social">
+						<svg
+							class="social-icon"
+							data-for-tab="messenger"
+							xmlns="http://www.w3.org/2000/svg"
+							xmlns:xlink="http://www.w3.org/1999/xlink"
+							aria-hidden="true"
+							role="img"
+							width="36"
+							height="36"
+							preserveAspectRatio="xMidYMid meet"
+							viewBox="0 0 24 24"
+						>
+							<path
+								d="M12 2C6.36 2 2 6.13 2 11.7c0 2.91 1.19 5.44 3.14 7.17c.16.13.26.35.27.57l.05 1.78c.04.57.61.94 1.13.71l1.98-.87c.17-.06.36-.09.53-.06c.9.27 1.9.4 2.9.4c5.64 0 10-4.13 10-9.7C22 6.13 17.64 2 12 2m6 7.46l-2.93 4.67c-.47.73-1.47.92-2.17.37l-2.34-1.73a.6.6 0 0 0-.72 0l-3.16 2.4c-.42.33-.97-.17-.68-.63l2.93-4.67c.47-.73 1.47-.92 2.17-.4l2.34 1.76a.6.6 0 0 0 .72 0l3.16-2.4c.42-.33.97.17.68.63z"
+								fill="currentColor"
+							/>
+						</svg>
+						<svg
+							class="social-icon"
+							data-for-tab="facebook"
+							xmlns="http://www.w3.org/2000/svg"
+							xmlns:xlink="http://www.w3.org/1999/xlink"
+							aria-hidden="true"
+							role="img"
+							width="36"
+							height="36"
+							preserveAspectRatio="xMidYMid meet"
+							viewBox="0 0 24 24"
+						>
+							<path
+								d="M12 2.04c-5.5 0-10 4.49-10 10.02c0 5 3.66 9.15 8.44 9.9v-7H7.9v-2.9h2.54V9.85c0-2.51 1.49-3.89 3.78-3.89c1.09 0 2.23.19 2.23.19v2.47h-1.26c-1.24 0-1.63.77-1.63 1.56v1.88h2.78l-.45 2.9h-2.33v7a10 10 0 0 0 8.44-9.9c0-5.53-4.5-10.02-10-10.02z"
+								fill="currentColor"
+							/>
+						</svg>
+						<svg
+							class="social-icon"
+							data-for-tab="line"
+							xmlns="http://www.w3.org/2000/svg"
+							xmlns:xlink="http://www.w3.org/1999/xlink"
+							aria-hidden="true"
+							role="img"
+							width="36px"
+							height="36px"
+							preserveAspectRatio="xMidYMid meet"
+							viewBox="0 0 32 32"
+						>
+							<path
+								d="M25.817 13.151a.842.842 0 1 1 0 1.683h-2.339v1.5h2.339a.84.84 0 1 1 0 1.678H22.64a.84.84 0 0 1-.837-.839v-6.36c0-.463.375-.843.837-.843h3.183a.842.842 0 0 1-.005 1.682h-2.339v1.5zm-5.134 4.021a.845.845 0 0 1-.844.838a.85.85 0 0 1-.683-.333l-3.255-4.427v3.921a.839.839 0 1 1-1.678 0v-6.36c0-.359.235-.681.573-.796a.754.754 0 0 1 .26-.043c.26 0 .5.141.661.339l3.281 4.437v-3.937c0-.463.375-.843.839-.843s.844.38.844.843zm-7.656 0a.843.843 0 0 1-.844.839a.84.84 0 0 1-.833-.839v-6.36c0-.463.375-.843.839-.843c.463 0 .839.38.839.843zm-3.287.839H6.557a.846.846 0 0 1-.844-.839v-6.36c0-.463.38-.843.844-.843s.839.38.839.843v5.521H9.74a.839.839 0 1 1 0 1.678zM32 13.749C32 6.588 24.817.76 16 .76S0 6.588 0 13.749c0 6.417 5.693 11.792 13.38 12.813c.521.109 1.229.344 1.412.787c.161.4.104 1.02.052 1.443l-.219 1.359c-.063.401-.323 1.579 1.396.86c1.724-.719 9.224-5.437 12.583-9.303C30.901 19.193 32 16.609 32 13.749z"
+								fill="currentColor"
+							/>
+						</svg>
+					</div>
+				</div>
+			</div>
+			<p class="copied">Copied!</p>
+		</footer>
+		<script>
+			function copyText(htmlElement) {
+				if (!htmlElement) {
+					return;
+				}
+				let elementText = htmlElement.innerText;
+				let inputElement = document.createElement("input");
+				let noti = document.querySelector(".copied");
+				inputElement.setAttribute("value", elementText);
+				document.body.appendChild(inputElement);
+				inputElement.select();
+				document.execCommand("copy");
+				inputElement.parentNode.removeChild(inputElement);
+
+				noti.classList.add("active");
+				function remove() {
+					noti.classList.remove("active");
+				}
+				setTimeout(remove, 300);
+			}
+
+			document.querySelector("#copymap").onclick = function () {
+				copyText(document.querySelector("#map"));
+			};
+			document.querySelector("#copyemail").onclick = function () {
+				copyText(document.querySelector("#email"));
+			};
+			document.querySelector("#copyphone").onclick = function () {
+				copyText(document.querySelector("#phone"));
+			};
+			document.querySelector("#copymessenger").onclick = function () {
+				copyText(document.querySelector("#messenger"));
+			};
+			document.querySelector("#copyfacebook").onclick = function () {
+				copyText(document.querySelector("#facebook"));
+			};
+			document.querySelector("#copyline").onclick = function () {
+				copyText(document.querySelector("#line"));
+			};
+			//social active class
+			function activesocial() {
+				document.querySelectorAll(".social svg").forEach((svg) => {
+					svg.addEventListener("click", () => {
+						const tabnumber = svg.dataset.forTab;
+						const socialActivate = document.querySelector(
+							'.socialcontent[data-tab="' + tabnumber + '"'
+						);
+
+						if (socialActivate.classList.contains("active") == false) {
+							document.querySelectorAll(".socialcontent").forEach((tab) => {
+								tab.classList.remove("active");
+								socialActivate.classList.add("active");
+							});
+							document.querySelectorAll(".social-icon").forEach((tab) => {
+								tab.classList.remove("active");
+								svg.classList.add("active");
+							});
+						} else {
+							socialActivate.classList.remove("active");
+							svg.classList.remove("active");
+						}
+					});
+				});
+			}
+			document.addEventListener("DOMContentLoaded", () => {
+				activesocial();
+			});
+		</script>
+	</body>
+</html>
