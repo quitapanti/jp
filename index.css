@@ -29,7 +29,6 @@
             .maincontainer {
                 top: 50%;
                 transform: translateY(-50%);
-                position: absolute;
             }
 			.maintext {
 				text-align: center;
