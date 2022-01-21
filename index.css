@@ -27,9 +27,9 @@
 				color: #e8e9eb;
 			}
             .maincontainer {
-                top: 50%;
-                transform: translateY(-50%);
-		    position: relative;
+                width: 90%;
+    		min-height: 80vh;
+    		margin: 10% auto;
             }
 			.maintext {
 				text-align: center;
