@@ -30,6 +30,7 @@
                 width: 90%;
     		min-height: 80vh;
     		margin: 10% auto;
+		vertical-align: middle;
             }
 			.maintext {
 				text-align: center;
