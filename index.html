@@ -1,388 +1,109 @@
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-		<!-- Basic Meta -->
-		<meta charset="UTF-8" />
-		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<meta name="author" content="Jimmprint" />
-		<meta
-			name="description"
-			content="ร้านพิมพ์งานสถาปัตย์ งานขนาดใหญ่ ตรงข้ามพาต้าปิ่นเกล้า"
-		/>
-		<title>Jimm Print</title>
+  <head>
+    <!-- Basic Meta -->
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="author" content="Jimmprint" />
+    <meta
+      name="description"
+      content="ร้านพิมพ์งานสถาปัตย์ งานขนาดใหญ่ ตรงข้ามพาต้าปิ่นเกล้า"
+    />
+    <title>Jimm Print</title>
 
-		<!-- Favicon -->
-		<link rel="shortcut icon" type="image/png" href="favicon.png" />
+    <!-- Favicon -->
+    <link rel="shortcut icon" type="image/png" href="images/favicon.png" />
 
-		<link rel="preconnect" href="https://fonts.googleapis.com" />
-		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-		<link
-			href="https://fonts.googleapis.com/css2?family=Krub&display=swap"
-			rel="stylesheet"
-		/>
-		<link rel="stylesheet" href="index.css" />
-	</head>
-	<body class="color__background">
-		<nav class="nav">
-			<a href="/" class="color__2 nav__link" data-link>Home</a>
-			<a href="../privacy-policy.html" class="color__2 nav__link" data-link
-				>Privacy Policy</a
-			>
-		</nav>
+    <!-- Mobile -->
+    <meta name="viewport" content="width=device-width, initial-scale=1" /><link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Maitree:wght@400;500;700&family=Prompt:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+    <style>
+      .body {
+        overflow: hidden;
+      }
+      .mainsnake {
+        padding: 1rem;
+        margin: 1rem;
+        height: 80vh;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+      }
+      .mainsnake p {
+        margin: 1rem;
+      }
 
-		<div class="maincontainer text__center">
-			<h1 class="color__1 maintext">ปิดปรับปรุงเวบไซต์</h1>
-			<br /><br />
-			<h1 class="color__2">ร้านยังเปิดปกติ</h1>
-			<br />
-			<h1 class="color__2">ติดต่อเราได้ที่ช่องทางด้านล่าง</h1>
-		</div>
-		<footer>
-			<div class="socialcontentcontainer">
-				<div class="socialcontent" data-tab="map">
-					<svg
-						class="social-icon"
-						xmlns="http://www.w3.org/2000/svg"
-						xmlns:xlink="http://www.w3.org/1999/xlink"
-						aria-hidden="true"
-						role="img"
-						width="27px"
-						height="36px"
-						preserveAspectRatio="xMidYMid meet"
-						viewBox="0 0 384 512"
-					>
-						<path
-							d="M172.268 501.67C26.97 291.031 0 269.413 0 192C0 85.961 85.961 0 192 0s192 85.961 192 192c0 77.413-26.97 99.031-172.268 309.67c-9.535 13.774-29.93 13.773-39.464 0zM192 272c44.183 0 80-35.817 80-80s-35.817-80-80-80s-80 35.817-80 80s35.817 80 80 80z"
-							fill="currentColor"
-						/>
-					</svg>
-					<p id="map" class="content-text">
-						176/5<br />ซ.สมเด็จพระปิ่นเกล้า 19 อรุณอมรินทร์ บางกอกน้อย กรุงเทพฯ
-						10700
-					</p>
-					<div class="buttonwrap">
-						<button id="copymap">Copy</button>
-						<button
-							onclick=" window.open('https://goo.gl/maps/ey1CJpm6z2xhcqJ57','_blank')"
-						>
-							Open in maps
-						</button>
-					</div>
-				</div>
-				<div class="socialcontent" data-tab="email">
-					<svg
-						class="social-icon"
-						data-for-tab="gmail"
-						xmlns="http://www.w3.org/2000/svg"
-						xmlns:xlink="http://www.w3.org/1999/xlink"
-						aria-hidden="true"
-						role="img"
-						width="36"
-						height="36"
-						preserveAspectRatio="xMidYMid meet"
-						viewBox="0 0 24 24"
-					>
-						<path
-							d="M20 18h-2V9.25L12 13L6 9.25V18H4V6h1.2l6.8 4.25L18.8 6H20m0-2H4c-1.11 0-2 .89-2 2v12a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2z"
-							fill="currentColor"
-						/>
-					</svg>
-					<p id="email" class="content-text">jimmprint.pinklao@gmail.com</p>
-					<div class="buttonwrap">
-						<button id="copyemail">Copy</button>
-						<button
-							onclick=" window.open('mailto:jimmprint.pinklao@gmail.com','_blank')"
-						>
-							Open with email
-						</button>
-					</div>
-				</div>
-				<div class="socialcontent" data-tab="phone">
-					<svg
-						class="social-icon"
-						data-for-tab="phone"
-						xmlns="http://www.w3.org/2000/svg"
-						xmlns:xlink="http://www.w3.org/1999/xlink"
-						aria-hidden="true"
-						role="img"
-						width="36"
-						height="36"
-						preserveAspectRatio="xMidYMid meet"
-						viewBox="0 0 24 24"
-					>
-						<path
-							d="M6.62 10.79c1.44 2.83 3.76 5.15 6.59 6.59l2.2-2.2c.28-.28.67-.36 1.02-.25c1.12.37 2.32.57 3.57.57a1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.25.2 2.45.57 3.57c.11.35.03.74-.25 1.02l-2.2 2.2z"
-							fill="currentColor"
-						/>
-					</svg>
-					<p id="phone" class="content-text">0840257778</p>
-					<div class="buttonwrap">
-						<button id="copyphone">Copy</button>
-						<button onclick="window.open('tel:66840257778','_blank')">
-							Call
-						</button>
-					</div>
-				</div>
-				<div class="socialcontent" data-tab="messenger">
-					<svg
-						class="social-icon"
-						xmlns="http://www.w3.org/2000/svg"
-						xmlns:xlink="http://www.w3.org/1999/xlink"
-						aria-hidden="true"
-						role="img"
-						width="36"
-						height="36"
-						preserveAspectRatio="xMidYMid meet"
-						viewBox="0 0 24 24"
-					>
-						<path
-							d="M12 2C6.36 2 2 6.13 2 11.7c0 2.91 1.19 5.44 3.14 7.17c.16.13.26.35.27.57l.05 1.78c.04.57.61.94 1.13.71l1.98-.87c.17-.06.36-.09.53-.06c.9.27 1.9.4 2.9.4c5.64 0 10-4.13 10-9.7C22 6.13 17.64 2 12 2m6 7.46l-2.93 4.67c-.47.73-1.47.92-2.17.37l-2.34-1.73a.6.6 0 0 0-.72 0l-3.16 2.4c-.42.33-.97-.17-.68-.63l2.93-4.67c.47-.73 1.47-.92 2.17-.4l2.34 1.76a.6.6 0 0 0 .72 0l3.16-2.4c.42-.33.97.17.68.63z"
-							fill="currentColor"
-						/>
-					</svg>
-					<p id="messenger" class="content-text">m.me/jimmprint</p>
-					<div class="buttonwrap">
-						<button id="copymessenger">Copy</button>
-						<button onclick=" window.open('https://m.me/jimmprint','_blank')">
-							Open in messenger
-						</button>
-					</div>
-				</div>
-				<div class="socialcontent" data-tab="facebook">
-					<svg
-						class="social-icon"
-						xmlns="http://www.w3.org/2000/svg"
-						xmlns:xlink="http://www.w3.org/1999/xlink"
-						aria-hidden="true"
-						role="img"
-						width="36"
-						height="36"
-						preserveAspectRatio="xMidYMid meet"
-						viewBox="0 0 24 24"
-					>
-						<path
-							d="M12 2.04c-5.5 0-10 4.49-10 10.02c0 5 3.66 9.15 8.44 9.9v-7H7.9v-2.9h2.54V9.85c0-2.51 1.49-3.89 3.78-3.89c1.09 0 2.23.19 2.23.19v2.47h-1.26c-1.24 0-1.63.77-1.63 1.56v1.88h2.78l-.45 2.9h-2.33v7a10 10 0 0 0 8.44-9.9c0-5.53-4.5-10.02-10-10.02z"
-							fill="currentColor"
-						/>
-					</svg>
-					<p id="facebook" class="content-text">facebook.com/jimmprint</p>
-					<div class="buttonwrap">
-						<button id="copyfacebook">Copy</button>
-						<button
-							onclick=" window.open('https://facebook.com/jimmprint','_blank')"
-						>
-							Open
-						</button>
-					</div>
-				</div>
-				<div class="socialcontent" data-tab="line">
-					<svg
-						class="social-icon"
-						xmlns="http://www.w3.org/2000/svg"
-						xmlns:xlink="http://www.w3.org/1999/xlink"
-						aria-hidden="true"
-						role="img"
-						width="27px"
-						height="36px"
-						preserveAspectRatio="xMidYMid meet"
-						viewBox="0 0 384 512"
-					>
-						<path
-							d="M172.268 501.67C26.97 291.031 0 269.413 0 192C0 85.961 85.961 0 192 0s192 85.961 192 192c0 77.413-26.97 99.031-172.268 309.67c-9.535 13.774-29.93 13.773-39.464 0zM192 272c44.183 0 80-35.817 80-80s-35.817-80-80-80s-80 35.817-80 80s35.817 80 80 80z"
-							fill="currentColor"
-						/>
-					</svg>
-					<img src="lineqr.png" alt="line" style="display: inline" />
-					<p id="line" class="content-text">@596ysfkn</p>
-					<div class="buttonwrap">
-						<button id="copyline">Copy</button>
-						<button onclick=" window.open('https://lin.ee/zJuSeeB','_blank')">
-							Open
-						</button>
-					</div>
-				</div>
-			</div>
-			<div class="socialwrapwrap">
-				<div class="socialwrap">
-					<div class="social">
-						<svg
-							class="social-icon"
-							data-for-tab="map"
-							xmlns="http://www.w3.org/2000/svg"
-							xmlns:xlink="http://www.w3.org/1999/xlink"
-							aria-hidden="true"
-							role="img"
-							width="27px"
-							height="36px"
-							preserveAspectRatio="xMidYMid meet"
-							viewBox="0 0 384 512"
-						>
-							<path
-								d="M172.268 501.67C26.97 291.031 0 269.413 0 192C0 85.961 85.961 0 192 0s192 85.961 192 192c0 77.413-26.97 99.031-172.268 309.67c-9.535 13.774-29.93 13.773-39.464 0zM192 272c44.183 0 80-35.817 80-80s-35.817-80-80-80s-80 35.817-80 80s35.817 80 80 80z"
-								fill="currentColor"
-							/>
-						</svg>
-						<svg
-							class="social-icon"
-							data-for-tab="email"
-							xmlns="http://www.w3.org/2000/svg"
-							xmlns:xlink="http://www.w3.org/1999/xlink"
-							aria-hidden="true"
-							role="img"
-							width="36"
-							height="36"
-							preserveAspectRatio="xMidYMid meet"
-							viewBox="0 0 24 24"
-						>
-							<path
-								d="M20 18h-2V9.25L12 13L6 9.25V18H4V6h1.2l6.8 4.25L18.8 6H20m0-2H4c-1.11 0-2 .89-2 2v12a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2z"
-								fill="currentColor"
-							/>
-						</svg>
-						<svg
-							class="social-icon"
-							data-for-tab="phone"
-							xmlns="http://www.w3.org/2000/svg"
-							xmlns:xlink="http://www.w3.org/1999/xlink"
-							aria-hidden="true"
-							role="img"
-							width="36"
-							height="36"
-							preserveAspectRatio="xMidYMid meet"
-							viewBox="0 0 24 24"
-						>
-							<path
-								d="M6.62 10.79c1.44 2.83 3.76 5.15 6.59 6.59l2.2-2.2c.28-.28.67-.36 1.02-.25c1.12.37 2.32.57 3.57.57a1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.25.2 2.45.57 3.57c.11.35.03.74-.25 1.02l-2.2 2.2z"
-								fill="currentColor"
-							/>
-						</svg>
-					</div>
-					<div class="social">
-						<svg
-							class="social-icon"
-							data-for-tab="messenger"
-							xmlns="http://www.w3.org/2000/svg"
-							xmlns:xlink="http://www.w3.org/1999/xlink"
-							aria-hidden="true"
-							role="img"
-							width="36"
-							height="36"
-							preserveAspectRatio="xMidYMid meet"
-							viewBox="0 0 24 24"
-						>
-							<path
-								d="M12 2C6.36 2 2 6.13 2 11.7c0 2.91 1.19 5.44 3.14 7.17c.16.13.26.35.27.57l.05 1.78c.04.57.61.94 1.13.71l1.98-.87c.17-.06.36-.09.53-.06c.9.27 1.9.4 2.9.4c5.64 0 10-4.13 10-9.7C22 6.13 17.64 2 12 2m6 7.46l-2.93 4.67c-.47.73-1.47.92-2.17.37l-2.34-1.73a.6.6 0 0 0-.72 0l-3.16 2.4c-.42.33-.97-.17-.68-.63l2.93-4.67c.47-.73 1.47-.92 2.17-.4l2.34 1.76a.6.6 0 0 0 .72 0l3.16-2.4c.42-.33.97.17.68.63z"
-								fill="currentColor"
-							/>
-						</svg>
-						<svg
-							class="social-icon"
-							data-for-tab="facebook"
-							xmlns="http://www.w3.org/2000/svg"
-							xmlns:xlink="http://www.w3.org/1999/xlink"
-							aria-hidden="true"
-							role="img"
-							width="36"
-							height="36"
-							preserveAspectRatio="xMidYMid meet"
-							viewBox="0 0 24 24"
-						>
-							<path
-								d="M12 2.04c-5.5 0-10 4.49-10 10.02c0 5 3.66 9.15 8.44 9.9v-7H7.9v-2.9h2.54V9.85c0-2.51 1.49-3.89 3.78-3.89c1.09 0 2.23.19 2.23.19v2.47h-1.26c-1.24 0-1.63.77-1.63 1.56v1.88h2.78l-.45 2.9h-2.33v7a10 10 0 0 0 8.44-9.9c0-5.53-4.5-10.02-10-10.02z"
-								fill="currentColor"
-							/>
-						</svg>
-						<svg
-							class="social-icon"
-							data-for-tab="line"
-							xmlns="http://www.w3.org/2000/svg"
-							xmlns:xlink="http://www.w3.org/1999/xlink"
-							aria-hidden="true"
-							role="img"
-							width="36px"
-							height="36px"
-							preserveAspectRatio="xMidYMid meet"
-							viewBox="0 0 32 32"
-						>
-							<path
-								d="M25.817 13.151a.842.842 0 1 1 0 1.683h-2.339v1.5h2.339a.84.84 0 1 1 0 1.678H22.64a.84.84 0 0 1-.837-.839v-6.36c0-.463.375-.843.837-.843h3.183a.842.842 0 0 1-.005 1.682h-2.339v1.5zm-5.134 4.021a.845.845 0 0 1-.844.838a.85.85 0 0 1-.683-.333l-3.255-4.427v3.921a.839.839 0 1 1-1.678 0v-6.36c0-.359.235-.681.573-.796a.754.754 0 0 1 .26-.043c.26 0 .5.141.661.339l3.281 4.437v-3.937c0-.463.375-.843.839-.843s.844.38.844.843zm-7.656 0a.843.843 0 0 1-.844.839a.84.84 0 0 1-.833-.839v-6.36c0-.463.375-.843.839-.843c.463 0 .839.38.839.843zm-3.287.839H6.557a.846.846 0 0 1-.844-.839v-6.36c0-.463.38-.843.844-.843s.839.38.839.843v5.521H9.74a.839.839 0 1 1 0 1.678zM32 13.749C32 6.588 24.817.76 16 .76S0 6.588 0 13.749c0 6.417 5.693 11.792 13.38 12.813c.521.109 1.229.344 1.412.787c.161.4.104 1.02.052 1.443l-.219 1.359c-.063.401-.323 1.579 1.396.86c1.724-.719 9.224-5.437 12.583-9.303C30.901 19.193 32 16.609 32 13.749z"
-								fill="currentColor"
-							/>
-						</svg>
-					</div>
-				</div>
-			</div>
-			<p class="copied">Copied!</p>
-			<div class="footerbar color__background"></div>
-		</footer>
-		<script>
-			function copyText(htmlElement) {
-				if (!htmlElement) {
-					return;
-				}
-				let elementText = htmlElement.innerText;
-				let inputElement = document.createElement("input");
-				let noti = document.querySelector(".copied");
-				inputElement.setAttribute("value", elementText);
-				document.body.appendChild(inputElement);
-				inputElement.select();
-				document.execCommand("copy");
-				inputElement.parentNode.removeChild(inputElement);
-
-				noti.classList.add("active");
-				function remove() {
-					noti.classList.remove("active");
-				}
-				setTimeout(remove, 300);
-			}
-
-			document.querySelector("#copymap").onclick = function () {
-				copyText(document.querySelector("#map"));
-			};
-			document.querySelector("#copyemail").onclick = function () {
-				copyText(document.querySelector("#email"));
-			};
-			document.querySelector("#copyphone").onclick = function () {
-				copyText(document.querySelector("#phone"));
-			};
-			document.querySelector("#copymessenger").onclick = function () {
-				copyText(document.querySelector("#messenger"));
-			};
-			document.querySelector("#copyfacebook").onclick = function () {
-				copyText(document.querySelector("#facebook"));
-			};
-			document.querySelector("#copyline").onclick = function () {
-				copyText(document.querySelector("#line"));
-			};
-			//social active class
-			function activesocial() {
-				document.querySelectorAll(".social svg").forEach((svg) => {
-					svg.addEventListener("click", () => {
-						const tabnumber = svg.dataset.forTab;
-						const socialActivate = document.querySelector(
-							'.socialcontent[data-tab="' + tabnumber + '"'
-						);
-
-						if (socialActivate.classList.contains("active") == false) {
-							document.querySelectorAll(".socialcontent").forEach((tab) => {
-								tab.classList.remove("active");
-								socialActivate.classList.add("active");
-							});
-							document.querySelectorAll(".social-icon").forEach((tab) => {
-								tab.classList.remove("active");
-								svg.classList.add("active");
-							});
-						} else {
-							socialActivate.classList.remove("active");
-							svg.classList.remove("active");
-						}
-					});
-				});
-			}
-			document.addEventListener("DOMContentLoaded", () => {
-				activesocial();
-			});
-		</script>
-	</body>
+      #bigsnake {
+        height: 50%;
+      }
+      .btn-enter {
+        padding: 0.25rem;
+        font-size: var(--fs-primary-heading);
+      }
+      /* .btn-enter:hover {
+    background-color: var(--clr-primary-400)
+  } */
+    </style>
+  </head>
+  <body>
+    <div class="mainsnake">
+      <svg
+        id="bigsnake"
+        data-name="Layer 1"
+        xmlns="http://www.w3.org/2000/svg"
+        viewBox="0 0 261.53 429.89"
+      >
+        <defs>
+          <style>
+            .cls-1 {
+              fill: none;
+              stroke: var(--clr-primary-400);
+              stroke-linecap: round;
+              stroke-linejoin: round;
+              stroke-width: 2px;
+            }
+          </style>
+        </defs>
+        <path
+          class="cls-1"
+          d="M252.73,247.59c-5.36-5.52-12.56-8.56-20.17-10.56-7.08-1.86-14.52-2.82-21.19-4-18.28-3.29-36.75-6.08-54.41-12-21.47-7.21-44.38-17.5-63.28-30-7.62-5-14.58-11.37-19.52-19A47.93,47.93,0,0,1,70.33,165c-10.61-24.47,6.56-50.59,32.84-52.57,18.16-1.37,37.66,9.17,53.81.75,12-6.28,17.58-21.21,29.57-27.6,5.88-3.14,12.92-3.8,18.63-7.23,6.34-3.82,10.38-10.26,14-16.53q10.07-17.55,20-35.15c1.94-3.43,5-7.43,3.27-11.56C240.05,9.5,234.75,4,229,2c-6.14-2.13-12.75-.45-18.48,2.12-10,4.51-20.11,9.15-29.34,15.17-6.76,4.42-13.13,9.64-17.82,16.22-8.62,12.08-5.11,27.15-16.13,38-3.89,3.83-9.51,6.3-14.83,5.12-10.84-2.38-19.29-3.3-30.64-1.65A95.19,95.19,0,0,0,61.1,92.51c-19.36,13.47-33,36.17-32.87,60.11.13,16.65,6.82,32.69,16.94,46a97.47,97.47,0,0,0,6.67,7.91c13.76,14.65,31.34,25.17,49.47,33.84a329.77,329.77,0,0,0,66.91,23.5c21.68,5.08,70.26,8.34,71.31,8.41h0v.09c-.07,1.2-.92,15-1.64,21.48l0,.07,0,.12a27.68,27.68,0,0,0,14.75-46.48Z"
+        />
+        <path
+          class="cls-1"
+          d="M145.55,374c-17.05.4-34.2,2.31-51.18-.1a103.2,103.2,0,0,1-52.63-24c-3-2.63-12-12.38-12-12.38l-3.29-24.25h0S2.79,317.67,5.06,344c2.53,29.18,39.69,54.15,83.43,59.52a138.94,138.94,0,0,0,40.61-.91c29.89-5.19,41.19-4.76,58.66-4.26.48,0,1,0,1.55.09,9.32.73,28.41,5.67,41.91,13.71-1.11-11.4-3-20.22-26.75-29.08-2.75-1-5.79-2.06-9.16-3.09C179.26,375,162.26,373.57,145.55,374Z"
+        />
+        <path
+          class="cls-1"
+          d="M238.37,319a34.18,34.18,0,0,0-3.64-2l-.11-.05V317c-6.81-3.34-14.58-4.6-22.14-5.78-31.14-4.87-62.27-7.29-93-15.24-17.94-4.64-36.11-9.57-52.51-18.41-14.85-8-33.1-22.09-37.35-39.38h0c.58-2,3.2-12.31,3.86-14.33.79-2.24,4.28-10.55,5.2-12.75,0,0-9.37-1.21-10.6-1.27a24.64,24.64,0,0,0-15,4C-4.5,225.52-.15,253.09,8.81,268.73A85.65,85.65,0,0,0,25,288.68l.11.11c10.06,9.34,22.06,16.91,33.83,23,20.54,10.64,42.82,17.61,65.3,22.8,10.14,2.35,20.36,4.29,30.64,5.89s20.57,2.89,30.91,3.92c6.85.68,13.72,1.23,20.59,1.7,3.5.24,7,.47,10.51.68l5.26.32c.23,0,3,.29,3.67.28h0c.07,0,.12,0,.13,0-1.63,4-3.47,7.88-5.47,11.69-.89,1.71-1.89,3.36-2.75,5.08-.18.35-1.26,2.3-1.36,2.49l0,0s20.46-2.31,27.07-10.69C252.53,344.44,251,327.17,238.37,319Z"
+        />
+        <path
+          class="cls-1"
+          d="M129.1,402.56a138.94,138.94,0,0,1-40.61.91l1.77,1.88c.6.81,2.71,3.25,3.93,4.65a71.08,71.08,0,0,0,5.68,5.64c1.32,1.1,4.14,3.36,5.44,4.33s4.57,3.12,6,3.86c1,.55,4.84,2.27,6.31,2.78,1.66.58,6.23,1.68,7.22,1.85a43.82,43.82,0,0,0,6.94.43c2-.05,6.32-.18,7.7-.31s3.8-.54,6-1c1.6-.36,5.83-1.62,6.49-1.86,1.22-.42,4.48-1.87,6.4-2.78a78,78,0,0,0,7-3.76,148.43,148.43,0,0,0,12.1-8.91c1.89-1.7,5.24-5.16,5.44-5.36l6.44-6.52c-.55-.05-1.07-.08-1.55-.09C170.29,397.8,159,397.37,129.1,402.56Z"
+        />
+        <path
+          class="cls-1"
+          d="M93.68,191c18.9,12.47,41.81,22.76,63.28,30,17.66,5.92,36.13,8.71,54.41,12,6.67,1.2,14.11,2.16,21.19,4-.11-17.54-9.86-33.54-20.68-46.64-15.31-18.51-36.22-32.78-59.65-38.12a88.52,88.52,0,0,0-41.07.47c-14.23,3.56-24.68,11-36.64,19a.84.84,0,0,0-.32.3l0,0C79.1,179.67,86.06,186,93.68,191Z"
+        />
+        <path
+          class="cls-1"
+          d="M26.42,313.23,25,288.68l.11.11c10.06,9.34,22.06,16.91,33.83,23,20.54,10.64,42.82,17.61,65.3,22.8,10.14,2.35,20.36,4.29,30.64,5.89s20.57,2.89,30.91,3.92c6.85.68,13.72,1.23,20.59,1.7,3.5.24,7,.47,10.51.68l5.26.32c.23,0,3,.29,3.67.28h0c.07,0,.12,0,.13,0-1.63,4-3.47,7.88-5.47,11.69-.89,1.71-1.89,3.36-2.75,5.08-.18.35-1.26,2.3-1.36,2.49l0,0c-1,1.6-2.05,3.17-3,4.64a91.49,91.49,0,0,1-8.28,11.11l-.6.61c-2.75-1-5.79-2.06-9.16-3.09-16.05-4.92-33.05-6.36-49.76-5.95-17.05.4-34.2,2.31-51.18-.1a103.2,103.2,0,0,1-52.63-24c-3-2.63-12-12.38-12-12.38l-3.29-24.25h0"
+        />
+        <path
+          class="cls-1"
+          d="M29.64,238.19h0c4.25,17.29,22.5,31.38,37.35,39.38,16.4,8.84,34.57,13.77,52.51,18.41,30.7,7.95,61.83,10.37,93,15.24,7.56,1.18,15.33,2.44,22.14,5.78v-.07c.19-.82,1.4-6.2,1.87-9,.29-1.87.74-7,1.44-14l0-.07c.72-6.48,1.57-20.28,1.64-21.48l0-.09c-1.05-.07-49.63-3.33-71.31-8.41a329.77,329.77,0,0,1-66.91-23.5c-18.13-8.67-35.71-19.19-49.47-33.84a97.47,97.47,0,0,1-6.67-7.91l0,0c-1.41,2.6-4.82,9.06-6.44,12.43-.92,2.2-4.41,10.51-5.2,12.75C32.84,225.88,30.22,236.15,29.64,238.19Z"
+        />
+      </svg>
+      <div>
+        <p style="user-select: none;">Hoc monstrum generat,<br />perficit ignis et Azoch.</p>
+      </div>
+      <a href="main.html" class="btn-enter">Enter</a>
+    </div>
+  </body>
 </html>
