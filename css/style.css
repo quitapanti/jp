@@ -337,9 +337,11 @@ button {
 }
 .redx {
   color: #ff160c;
+  font-size: large;
 }
 .greencheck {
   color: #66ff00;
+  font-size: large;
 }
 /* .timetablediv th, td {
     border: 2px solid var(--clr-neutral-100);
