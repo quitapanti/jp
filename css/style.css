@@ -399,7 +399,7 @@ footer p {
   grid-row-end: 3;
   text-align: center;
 }
-@media (min-width: 900px) {
+@media (min-width: 1300px) {
   .tablewrap {
     width: 80%;
     column-count: 2;
