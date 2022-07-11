@@ -202,7 +202,7 @@ nav ul li a {
 .burger{
   display: none;
 }
-@media (max-width: 650px) {
+@media (max-width: 900px) {
   nav {
     z-index: 1000;
     position: fixed;
