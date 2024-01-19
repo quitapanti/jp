@@ -370,14 +370,15 @@
     </footer>
   </body>
   <script>
-    function copyText(htmlElement) {
-      if (!htmlElement) {
+    <!-- function copyText(htmlInputElement) {
+      
+      if (!htmlInputElement) {
         return;
       }
-      let elementText = htmlElement.innerText;
-      let inputElement = document.createElement("input");
+      let elementText = htmlInputElement.value;
+      <!--let inputElement = document.createElement("input"); -->
       let noti = document.querySelector(".noti");
-      inputElement.setAttribute("value", elementText);
+      <!-- inputElement.setAttribute("value", elementText); -->
       document.body.appendChild(inputElement);
       inputElement.select();
       document.execCommand("copy");
@@ -405,5 +406,20 @@
     document.querySelector("#copyline").onclick = function () {
       copyText(document.querySelector("#line"));
     };
+    -->
+  
+let noti = document.querySelector(".noti");
+    
+function copyMap() {
+    var textBox = document.getElementById("map");
+    textBox.select();
+    document.execCommand("copy");
+
+    noti.classList.add("active");
+    function remove() {
+    noti.classList.remove("active");
+      }
+    setTimeout(remove, 300);
+}
   </script>
 </html>
