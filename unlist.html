@@ -375,15 +375,11 @@ function copyText(htmlInputElement) {
       if (!htmlInputElement) {
         return;
       }
-      let elementText = htmlInputElement.value;
-      <!-- let inputElement = document.createElement("input"); -->
+      let elementText = htmlInputElement;
       let noti = document.querySelector(".noti");
       
-      <!-- inputElement.setAttribute("value", elementText); -->
-      <!-- document.body.appendChild(inputElement); -->
       elementText.select();
       document.execCommand("copy");
-      <!-- inputElement.parentNode.removeChild(inputElement); -->
 
       noti.classList.add("active");
       function remove() {
