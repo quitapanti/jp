@@ -83,42 +83,58 @@
           <table>
             <tr>
               <th>วัน</th>
+              <!--
               <th>7:30-11:00</th>
+              -->
               <th>20:00-24:00</th>
             </tr>
             <tr>
               <td>อาทิตย์</td>
+              <!--
               <td class="redx">ปิด ✖</td>
+              -->
               <td class="greencheck">เปิด ✔</td>
             </tr>
             <tr>
               <td>จันทร์</td>
+              <!--
               <td class="greencheck"> เปิด ✔</td>
+              -->
               <td class="greencheck"> เปิด ✔</td>
             </tr>
             <tr>
               <td>อังคาร</td>
+              <!--
               <td class="greencheck"> เปิด ✔</td>
+              -->
               <td class="greencheck"> เปิด ✔</td>
             </tr>
             <tr>
               <td>พุธ</td>
+              <!--
               <td class="greencheck"> เปิด ✔</td>
+              -->
               <td class="greencheck"> เปิด ✔</td>
             </tr>
             <tr>
               <td>พฤหัสฯ</td>
+              <!--
               <td class="greencheck"> เปิด ✔</td>
+              -->
               <td class="greencheck"> เปิด ✔</td>
             </tr>
             <tr>
               <td>ศุกร์</td>
+              <!--
               <td class="greencheck"> เปิด ✔</td>
+              -->
               <td class="greencheck"> เปิด ✔</td>
             </tr>
             <tr>
               <td>เสาร์</td>
+              <!--
               <td class="redx">ปิด ✖</td>
+              -->
               <td class="redx">ปิด ✖</td>
             </tr>
           </table>
@@ -248,51 +264,26 @@
       switch (dayName.getDay()) {
         case 0:
           dayMessage.innerHTML =
-          "วันนี้วันอาทิตย์<br>
-            <!--
-            ช่วงเช้าไม่เปิด<br>กลางคืน
-            -->
-               เปิด 20:00-24:00";
+          "วันนี้วันอาทิตย์<br>เปิด 20:00-24:00";
           break;
           case 1:
             dayMessage.innerHTML =
-            "วันนี้วันจันทร์<br>
-              <!--
-              ช่วงเช้าเปิด 7:30-11:00<br>กลางคืน
-              -->
-              เปิด 20:00-24:00";
+            "วันนี้วันจันทร์<br>เปิด 20:00-24:00";
           break;
         case 2:
           dayMessage.innerHTML =
-            "วันนี้วันอังคาร<br>
-            <!--
-            ช่วงเช้าเปิด 7:30-11:00<br>กลางคืน
-            -->
-            เปิด 20:00-24:00";
+            "วันนี้วันอังคาร<br>เปิด 20:00-24:00";
           break;
         case 3:
           dayMessage.innerHTML =
-            "วันนี้วันพุธ<br>
-            <!--
-            ช่วงเช้าเปิด 7:30-11:00<br>กลางคืน
-            -->
-            เปิด 20:00-24:00";
+            "วันนี้วันพุธ<br>เปิด 20:00-24:00";
           break;
         case 4:
-          dayMessage.innerHTML =
-            "วันนี้วันพฤหัสฯ<br>
-            <!--
-            ช่วงเช้าเปิด 7:30-11:00<br>กลางคืน
-            -->
-            เปิด 20:00-24:00";
+          dayMessage.innerHTML = "วันนี้วันพฤหัสฯ<br>เปิด 20:00-24:00";
           break;
         case 5:
           dayMessage.innerHTML =
-            "วันนี้วันศุกร์<br>
-            <!--
-            ช่วงเช้าเปิด 7:30-11:00<br>กลางคืน
-            -->
-            เปิด 20:00-24:00";
+            "วันนี้วันศุกร์<br>เปิด 20:00-24:00";
           break;
         case 6:
           dayMessage.innerHTML = "วันนี้วันเสาร์<br>ร้านหยุด";
