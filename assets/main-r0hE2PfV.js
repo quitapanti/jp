@@ -1,4 +1,4 @@
-import"./style-Cqdrxz1I.js";/**
+import"./footer-Cw45Beaw.js";/**
  * @license
  * Copyright 2010-2025 Three.js Authors
  * SPDX-License-Identifier: MIT
