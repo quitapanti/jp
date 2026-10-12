@@ -1,5 +1,5 @@
-<!DOCTYPE html>
-<html lang="en">
+<!doctype html>
+<html lang="th" class="already-visited">
   <head>
     <!-- Basic Meta -->
     <meta charset="UTF-8" />
@@ -9,16 +9,45 @@
       name="description"
       content="ร้านพิมพ์งานสถาปัตย์ งานขนาดใหญ่ ตรงข้ามพาต้าปิ่นเกล้า"
     />
-    <title>Jimm Print</title>
+    <title>Jimm Print - Opening Hours</title>
+
+    <!-- INSTANT PREFERENCE SCRIPT -->
+    <script>
+      (function () {
+        let selectedLang = localStorage.getItem("userLang");
+        if (!selectedLang) {
+          const browserLang =
+            navigator.language || navigator.userLanguage || "";
+          selectedLang = browserLang.toLowerCase().startsWith("en")
+            ? "en"
+            : "th";
+        }
+        document.documentElement.setAttribute("data-lang", selectedLang);
+      })();
+    </script>
 
     <!-- Favicon -->
-    <link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png">
-<link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
-<link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16x16.png">
-<link rel="manifest" href="/assets/site-CCjZE5-t.webmanifest">
-<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
-<meta name="msapplication-TileColor" content="#da532c">
-<meta name="theme-color" content="#ffffff">
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="/images/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="/images/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="/images/favicon-16x16.png"
+    />
+    <link rel="manifest" href="/assets/site-CCjZE5-t.webmanifest" />
+    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5" />
+    <meta name="msapplication-TileColor" content="#da532c" />
+    <meta name="theme-color" content="#ffffff" />
 
     <!-- Mobile -->
     <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -28,21 +57,13 @@
       href="https://fonts.googleapis.com/css2?family=Maitree:wght@400;500;700&family=Prompt:wght@400;500;700&display=swap"
       rel="stylesheet"
     />
-    <script type="module" crossorigin src="/assets/footer-CFSWRcBt.js"></script>
-    <script type="module" crossorigin src="/assets/nav-DogM-Ecs.js"></script>
-    <link rel="stylesheet" crossorigin href="/assets/footer-BszOKQNQ.css">
+    <script type="module" crossorigin src="/assets/footer-CmYx9I4W.js"></script>
+    <link rel="stylesheet" crossorigin href="/assets/footer-D3FG-0iX.css">
   </head>
   <body>
-    <nav data-visible="false">
-      <ul>
-        <li><a href="/">หน้าหลัก</a></li>
-        <!-- <li><a href="/main/">ดูเวลาทำการ</a></li> -->
-        <li><a href="/pricing/">ดูราคา</a></li>
-        <li><a href="/3d/">ปรินต์ 3D</a></li>
-        <li><a href="/about/">เกี่ยวกับร้านจิ้ม</a></li>
-        <li><a href="/contact/">ช่องทางติดต่อ</a></li>
-      </ul>
-    </nav>
+    <!-- Reusable Navigation Component -->
+    <site-nav></site-nav>
+
     <div class="burger">
       <svg
         xmlns="http://www.w3.org/2000/svg"
@@ -62,17 +83,29 @@
         <line x1="4" y1="18" x2="20" y2="18"></line>
       </svg>
     </div>
+
     <div class="container">
       <div class="content">
-        <!--
-        <h1>ช่วงนี้ร้านปิดชั่วคราว</h1>
-        <h2>จะกลับมาเปิดตามปกติอีกครั้งเดือนกรกฎาคม</h2>
-        -->
         <h1 class="daymessage"></h1>
-        <h2 style="text-align:center;">อันนี้เป็นข้อความอัตโนมัติ
-          <br>ถ้าจะเอาชัวร์จิ้ม<a href="https://goo.gl/maps/ey1CJpm6z2xhcqJ57" style="color: var(--clr-accent-400);">ตรงนี้</a>
+
+        <h2 style="text-align: center">
+          <span data-lang="th">
+            อันนี้เป็นข้อความอัตโนมัติ<br />ถ้าจะเอาชัวร์จิ้ม<a
+              href="https://goo.gl/maps/ey1CJpm6z2xhcqJ57"
+              style="color: var(--clr-accent-400)"
+              >ตรงนี้</a
+            >
+          </span>
+          <span data-lang="en">
+            This is an automated status.<br />To double check, click
+            <a
+              href="https://goo.gl/maps/ey1CJpm6z2xhcqJ57"
+              style="color: var(--clr-accent-400)"
+              >here</a
+            >
+          </span>
         </h2>
-        
+
         <a
           class="timetabletrigger"
           style="
@@ -81,127 +114,158 @@
             padding: 0.5rem;
             border: 1px solid white;
           "
-          >ดูตารางเวลาทำการของร้าน</a
         >
+          <span data-lang="th">ดูตารางเวลาทำการของร้าน</span>
+          <span data-lang="en">View Full Opening Hours</span>
+        </a>
+
         <div class="timetablediv" data-visible="false">
           <table>
             <tr>
-              <th>วัน</th>
-              <!--
-              <th>7:30-11:00</th>
-              -->
-              <th>20:00-24:00</th>
+              <th>
+                <span data-lang="th">วัน</span>
+                <span data-lang="en">Day</span>
+              </th>
+              <th>20:00 - 00:00</th>
             </tr>
             <tr>
-              <td>อาทิตย์</td>
-              <!--
-              <td class="redx">ปิด ✖</td>
-              -->
-              <td class="greencheck">เปิด ✔</td>
+              <td>
+                <span data-lang="th">อาทิตย์</span>
+                <span data-lang="en">Sunday</span>
+              </td>
+              <td class="greencheck">
+                <span data-lang="th">เปิด ✔</span>
+                <span data-lang="en">Open ✔</span>
+              </td>
             </tr>
             <tr>
-              <td>จันทร์</td>
-              <!--
-              <td class="greencheck"> เปิด ✔</td>
-              -->
-              <td class="greencheck"> เปิด ✔</td>
+              <td>
+                <span data-lang="th">จันทร์</span>
+                <span data-lang="en">Monday</span>
+              </td>
+              <td class="greencheck">
+                <span data-lang="th">เปิด ✔</span>
+                <span data-lang="en">Open ✔</span>
+              </td>
             </tr>
             <tr>
-              <td>อังคาร</td>
-              <!--
-              <td class="greencheck"> เปิด ✔</td>
-              -->
-              <td class="greencheck"> เปิด ✔</td>
+              <td>
+                <span data-lang="th">อังคาร</span>
+                <span data-lang="en">Tuesday</span>
+              </td>
+              <td class="greencheck">
+                <span data-lang="th">เปิด ✔</span>
+                <span data-lang="en">Open ✔</span>
+              </td>
             </tr>
             <tr>
-              <td>พุธ</td>
-              <!--
-              <td class="greencheck"> เปิด ✔</td>
-              -->
-              <td class="greencheck"> เปิด ✔</td>
+              <td>
+                <span data-lang="th">พุธ</span>
+                <span data-lang="en">Wednesday</span>
+              </td>
+              <td class="greencheck">
+                <span data-lang="th">เปิด ✔</span>
+                <span data-lang="en">Open ✔</span>
+              </td>
             </tr>
             <tr>
-              <td>พฤหัสฯ</td>
-              <!--
-              <td class="greencheck"> เปิด ✔</td>
-              -->
-              <td class="greencheck"> เปิด ✔</td>
+              <td>
+                <span data-lang="th">พฤหัสฯ</span>
+                <span data-lang="en">Thursday</span>
+              </td>
+              <td class="greencheck">
+                <span data-lang="th">เปิด ✔</span>
+                <span data-lang="en">Open ✔</span>
+              </td>
             </tr>
             <tr>
-              <td>ศุกร์</td>
-              <!--
-              <td class="greencheck"> เปิด ✔</td>
-              -->
-              <td class="greencheck"> เปิด ✔</td>
+              <td>
+                <span data-lang="th">ศุกร์</span>
+                <span data-lang="en">Friday</span>
+              </td>
+              <td class="greencheck">
+                <span data-lang="th">เปิด ✔</span>
+                <span data-lang="en">Open ✔</span>
+              </td>
             </tr>
             <tr>
-              <td>เสาร์</td>
-              <!--
-              <td class="redx">ปิด ✖</td>
-              -->
-              <td class="redx">ปิด ✖</td>
+              <td>
+                <span data-lang="th">เสาร์</span>
+                <span data-lang="en">Saturday</span>
+              </td>
+              <td class="redx">
+                <span data-lang="th">ปิด ✖</span>
+                <span data-lang="en">Closed ✖</span>
+              </td>
             </tr>
           </table>
           <br />
-          <button class="btn-close-timetable">ปิด</button>
+          <button class="btn-close-timetable">
+            <span data-lang="th">ปิด</span>
+            <span data-lang="en">Close</span>
+          </button>
         </div>
       </div>
     </div>
+
     <site-footer></site-footer>
-<script>
+
+    <script>
       const dayMessage = document.querySelector(".daymessage");
+      const today = new Date().getDay();
 
-      let dayName = new Date();
-      switch (dayName.getDay()) {
-        case 0:
-          dayMessage.innerHTML =
-          "วันนี้วันอาทิตย์<br>เปิด 20:00-24:00";
-          break;
-          case 1:
-            dayMessage.innerHTML =
-            "วันนี้วันจันทร์<br>เปิด 20:00-24:00";
-          break;
-        case 2:
-          dayMessage.innerHTML =
-            "วันนี้วันอังคาร<br>เปิด 20:00-24:00";
-          break;
-        case 3:
-          dayMessage.innerHTML =
-            "วันนี้วันพุธ<br>เปิด 20:00-24:00";
-          break;
-        case 4:
-          dayMessage.innerHTML = "วันนี้วันพฤหัสฯ<br>เปิด 20:00-24:00";
-          break;
-        case 5:
-          dayMessage.innerHTML =
-            "วันนี้วันศุกร์<br>เปิด 20:00-24:00";
-          break;
-        case 6:
-          dayMessage.innerHTML = "วันนี้วันเสาร์<br>ร้านหยุด";
-          break;
-        default:
-          dayMessage.innerHTML = "วันนี้วันร้านปิด T_T";
+      const messages = {
+        0: {
+          th: "วันนี้วันอาทิตย์<br>เปิด 20:00-00:00",
+          en: "Today is Sunday<br>Open 20:00-00:00",
+        },
+        1: {
+          th: "วันนี้วันจันทร์<br>เปิด 20:00-00:00",
+          en: "Today is Monday<br>Open 20:00-00:00",
+        },
+        2: {
+          th: "วันนี้วันอังคาร<br>เปิด 20:00-00:00",
+          en: "Today is Tuesday<br>Open 20:00-00:00",
+        },
+        3: {
+          th: "วันนี้วันพุธ<br>เปิด 20:00-00:00",
+          en: "Today is Wednesday<br>Open 20:00-00:00",
+        },
+        4: {
+          th: "วันนี้วันพฤหัสฯ<br>เปิด 20:00-00:00",
+          en: "Today is Thursday<br>Open 20:00-00:00",
+        },
+        5: {
+          th: "วันนี้วันศุกร์<br>เปิด 20:00-00:00",
+          en: "Today is Friday<br>Open 20:00-00:00",
+        },
+        6: {
+          th: "วันนี้วันเสาร์<br>ร้านหยุด",
+          en: "Today is Saturday<br>Closed",
+        },
+      };
+
+      const msg = messages[today] || {
+        th: "วันนี้วันร้านปิด T_T",
+        en: "Shop is closed today T_T",
+      };
+
+      dayMessage.innerHTML = `
+        <span data-lang="th">${msg.th}</span>
+        <span data-lang="en">${msg.en}</span>
+      `;
+
+      function toggleTimetable() {
+        let timetablediv = document.querySelector(".timetablediv");
+        let visibility = timetablediv.getAttribute("data-visible");
+        timetablediv.setAttribute(
+          "data-visible",
+          visibility === "false" ? "true" : "false",
+        );
       }
-      document.querySelector(".timetabletrigger").onclick = function () {
-        let timetablediv = document.querySelector(".timetablediv");
-        let visibility = timetablediv.getAttribute("data-visible");
 
-        if (visibility === "false") {
-          timetablediv.setAttribute("data-visible", true);
-        } else if (visibility === "true") {
-          timetablediv.setAttribute("data-visible", false);
-        }
-      };
-      document.querySelector(".btn-close-timetable").onclick = function () {
-        let timetablediv = document.querySelector(".timetablediv");
-        let visibility = timetablediv.getAttribute("data-visible");
-
-        if (visibility === "false") {
-          timetablediv.setAttribute("data-visible", true);
-        } else if (visibility === "true") {
-          timetablediv.setAttribute("data-visible", false);
-        }
-      };
+      document.querySelector(".timetabletrigger").onclick = toggleTimetable;
+      document.querySelector(".btn-close-timetable").onclick = toggleTimetable;
     </script>
   </body>
 </html>

@@ -1,5 +1,5 @@
-<!DOCTYPE html>
-<html lang="en">
+<!doctype html>
+<html lang="th">
   <head>
     <!-- Basic Meta -->
     <meta charset="UTF-8" />
@@ -11,16 +11,49 @@
     />
     <title>Jimm Print</title>
 
-    <!-- Favicon -->
-    <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
-<link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32.png">
-<link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16.png">
-<link rel="manifest" href="/assets/site-CCjZE5-t.webmanifest">
-<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
-<meta name="msapplication-TileColor" content="#da532c">
-<meta name="theme-color" content="#ffffff">
+    <!-- INSTANT PREFERENCE & SESSION SCRIPT -->
+    <script>
+      if (sessionStorage.getItem("hasLoadedBefore") === "true") {
+        document.documentElement.classList.add("already-visited");
+      }
 
-    <!-- Mobile -->
+      (function () {
+        let selectedLang = localStorage.getItem("userLang");
+        if (!selectedLang) {
+          const browserLang =
+            navigator.language || navigator.userLanguage || "";
+          selectedLang = browserLang.toLowerCase().startsWith("en")
+            ? "en"
+            : "th";
+        }
+        document.documentElement.setAttribute("data-lang", selectedLang);
+      })();
+    </script>
+
+    <!-- Favicon & Manifest -->
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="/images/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="/images/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="/images/favicon-16x16.png"
+    />
+    <link rel="manifest" href="/assets/site-CCjZE5-t.webmanifest" />
+    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5" />
+    <meta name="msapplication-TileColor" content="#da532c" />
+    <meta name="theme-color" content="#ffffff" />
+
+    <!-- Mobile & Fonts -->
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -28,31 +61,53 @@
       href="https://fonts.googleapis.com/css2?family=Maitree:wght@400;500;700&family=Prompt:wght@400;500;700&display=swap"
       rel="stylesheet"
     />
-    <script type="module" crossorigin src="/assets/main-Df2L7mIs.js"></script>
-    <link rel="modulepreload" crossorigin href="/assets/footer-CFSWRcBt.js">
-    <link rel="stylesheet" crossorigin href="/assets/footer-BszOKQNQ.css">
+
+    <!-- Stylesheet & Scripts -->
+    <script type="module" crossorigin src="/assets/main-DU58SCSc.js"></script>
+    <link rel="modulepreload" crossorigin href="/assets/footer-CmYx9I4W.js">
+    <link rel="stylesheet" crossorigin href="/assets/footer-D3FG-0iX.css">
     <link rel="stylesheet" crossorigin href="/assets/main-DiGq3jDg.css">
   </head>
   <body>
-    <!-- <script>0</script> -->
-    <!-- <div id="app"></div> -->
     <div class="loadingscreen">
       <div class="spinner"></div>
+
+      <!-- Motto -->
       <p class="motto">
-        Hoc monstrum generat,<br />tum perficit ignis, et Azoch
+        <span data-lang="th">อสุรปาตุภาโว<br />เตโชจิณฺณะโลหะปริปูริโต</span>
+        <span data-lang="en"
+          >Hoc monstrum generat,<br />tum perficit ignis, et Azoch</span
+        >
       </p>
-      <button class="btn-enter">Enter</button>
+
+      <div class="enter-container">
+        <!-- Thinsnake graphic positioned over/above the enter button -->
+        <img
+          src="/images/thinsnake.svg"
+          alt="Snake Graphic"
+          class="enter-graphic"
+        />
+
+        <button class="btn-enter">
+          <span data-lang="th">เข้าสู่เว็บไซต์</span>
+          <span data-lang="en">Enter</span>
+        </button>
+
+        <!-- Loading Screen Language Toggle Button -->
+        <button
+          type="button"
+          class="btn-lang lang-switch-btn"
+          aria-label="Switch Language"
+        >
+          <span data-lang="th">English</span>
+          <span data-lang="en">ภาษาไทย</span>
+        </button>
+      </div>
     </div>
-    <nav data-visible="false">
-      <ul>
-        <!-- <li><a href="/">หน้าหลัก</a></li> -->
-        <li><a href="/main/">ดูเวลาทำการ</a></li>
-        <li><a href="/pricing/">ดูราคา</a></li>
-        <li><a href="/3d/">ปรินต์ 3D</a></li>
-        <li><a href="/about/">เกี่ยวกับร้านจิ้ม</a></li>
-        <li><a href="/contact/">ช่องทางติดต่อ</a></li>
-      </ul>
-    </nav>
+
+    <!-- Reusable Navigation Component -->
+    <site-nav></site-nav>
+
     <div class="burger">
       <svg
         xmlns="http://www.w3.org/2000/svg"
@@ -72,12 +127,15 @@
         <line x1="4" y1="18" x2="20" y2="18"></line>
       </svg>
     </div>
+
     <div id="experience">
       <div class="loader"></div>
       <canvas id="experience-canvas"></canvas>
     </div>
+
     <img class="reset-view-button" src="/textures/refresh.webp" alt="RESET" />
-    <h1 class="guidetext"> </h1>
+    <h1 class="guidetext"></h1>
+
     <site-footer></site-footer>
   </body>
 </html>

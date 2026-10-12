@@ -1,4 +1,21 @@
-(function(){const r=document.createElement("link").relList;if(r&&r.supports&&r.supports("modulepreload"))return;for(const e of document.querySelectorAll('link[rel="modulepreload"]'))o(e);new MutationObserver(e=>{for(const t of e)if(t.type==="childList")for(const i of t.addedNodes)i.tagName==="LINK"&&i.rel==="modulepreload"&&o(i)}).observe(document,{childList:!0,subtree:!0});function n(e){const t={};return e.integrity&&(t.integrity=e.integrity),e.referrerPolicy&&(t.referrerPolicy=e.referrerPolicy),e.crossOrigin==="use-credentials"?t.credentials="include":e.crossOrigin==="anonymous"?t.credentials="omit":t.credentials="same-origin",t}function o(e){if(e.ep)return;e.ep=!0;const t=n(e);fetch(e.href,t)}})();class s extends HTMLElement{connectedCallback(){this.innerHTML=`
+(function(){const o=document.createElement("link").relList;if(o&&o.supports&&o.supports("modulepreload"))return;for(const t of document.querySelectorAll('link[rel="modulepreload"]'))r(t);new MutationObserver(t=>{for(const e of t)if(e.type==="childList")for(const a of e.addedNodes)a.tagName==="LINK"&&a.rel==="modulepreload"&&r(a)}).observe(document,{childList:!0,subtree:!0});function c(t){const e={};return t.integrity&&(e.integrity=t.integrity),t.referrerPolicy&&(e.referrerPolicy=t.referrerPolicy),t.crossOrigin==="use-credentials"?e.credentials="include":t.crossOrigin==="anonymous"?e.credentials="omit":e.credentials="same-origin",e}function r(t){if(t.ep)return;t.ep=!0;const e=c(t);fetch(t.href,e)}})();class p extends HTMLElement{connectedCallback(){const o=window.location.pathname,t=[{path:"/",th:"หน้าหลัก",en:"Home"},{path:"/main/",th:"ดูเวลาทำการ",en:"Opening Hours"},{path:"/pricing/",th:"ดูราคา",en:"Pricing"},{path:"/3d/",th:"ปรินต์ 3D",en:"3D Printing"},{path:"/about/",th:"เกี่ยวกับร้านจิ้ม",en:"About Jimm"},{path:"/contact/",th:"ช่องทางติดต่อ",en:"Contact Us"}].filter(n=>{const l=o.replace(/\/$/,"")||"/",i=n.path.replace(/\/$/,"")||"/";return l!==i}).map(n=>`
+        <li>
+          <a href="${n.path}">
+            <span data-lang="th">${n.th}</span>
+            <span data-lang="en">${n.en}</span>
+          </a>
+        </li>
+      `).join("");this.innerHTML=`
+      <nav data-visible="false">
+        <ul>
+          ${t}
+        </ul>
+        <button type="button" class="lang-switch-btn nav-lang-btn" aria-label="Switch Language">
+          <span data-lang="th" style="font-size: 1.5rem; line-height: 1; display: inline-block;">🇬🇧</span>
+          <span data-lang="en" style="font-size: 1.5rem; line-height: 1; display: inline-block;">🇹🇭</span>
+        </button>
+      </nav>
+    `;const e=this.querySelector("nav"),a=document.querySelector(".burger"),h=this.querySelector(".lang-switch-btn");a&&e&&(a.onclick=n=>{n.stopPropagation();const l=e.getAttribute("data-visible");e.setAttribute("data-visible",l==="false"?"true":"false")}),h&&(h.onclick=n=>{n.stopPropagation();const i=(document.documentElement.getAttribute("data-lang")||"th")==="th"?"en":"th";document.documentElement.setAttribute("data-lang",i),localStorage.setItem("userLang",i),window.dispatchEvent(new CustomEvent("langchange",{detail:{lang:i}}))}),document.addEventListener("click",n=>{const l=this.contains(n.target),i=a&&a.contains(n.target);e.getAttribute("data-visible")==="true"&&!l&&!i&&e.setAttribute("data-visible","false")})}}customElements.define("site-nav",p);class g extends HTMLElement{connectedCallback(){this.innerHTML=`
         <footer>
           <ul class="links">
             <li>
@@ -52,4 +69,4 @@
             Copyright &copy; 2026, Jimm Print. All Rights Reserved
           </p>
         </footer>
-      `}}customElements.define("site-footer",s);
+      `}}customElements.define("site-footer",g);

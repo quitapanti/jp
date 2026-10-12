@@ -1,5 +1,5 @@
-<!DOCTYPE html>
-<html lang="en">
+<!doctype html>
+<html lang="th" class="already-visited">
   <head>
     <!-- Basic Meta -->
     <meta charset="UTF-8" />
@@ -9,16 +9,45 @@
       name="description"
       content="ร้านพิมพ์งานสถาปัตย์ งานขนาดใหญ่ ตรงข้ามพาต้าปิ่นเกล้า"
     />
-    <title>Jimm Print</title>
+    <title>Jimm Print - Contact</title>
+
+    <!-- INSTANT PREFERENCE SCRIPT -->
+    <script>
+      (function () {
+        let selectedLang = localStorage.getItem("userLang");
+        if (!selectedLang) {
+          const browserLang =
+            navigator.language || navigator.userLanguage || "";
+          selectedLang = browserLang.toLowerCase().startsWith("en")
+            ? "en"
+            : "th";
+        }
+        document.documentElement.setAttribute("data-lang", selectedLang);
+      })();
+    </script>
 
     <!-- Favicon -->
-    <link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png">
-<link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
-<link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16x16.png">
-<link rel="manifest" href="/assets/site-CCjZE5-t.webmanifest">
-<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
-<meta name="msapplication-TileColor" content="#da532c">
-<meta name="theme-color" content="#ffffff">
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="/images/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="/images/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="/images/favicon-16x16.png"
+    />
+    <link rel="manifest" href="/assets/site-CCjZE5-t.webmanifest" />
+    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5" />
+    <meta name="msapplication-TileColor" content="#da532c" />
+    <meta name="theme-color" content="#ffffff" />
 
     <!-- Mobile -->
     <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -27,23 +56,16 @@
     <link
       href="https://fonts.googleapis.com/css2?family=Maitree:wght@400;500;700&family=Prompt:wght@400;500;700&display=swap"
       rel="stylesheet"
-    />
-    <script type="module" crossorigin src="/assets/footer-CFSWRcBt.js"></script>
-    <script type="module" crossorigin src="/assets/nav-DogM-Ecs.js"></script>
-    <link rel="stylesheet" crossorigin href="/assets/footer-BszOKQNQ.css">
+    />
+
+    <script type="module" crossorigin src="/assets/footer-CmYx9I4W.js"></script>
+    <link rel="stylesheet" crossorigin href="/assets/footer-D3FG-0iX.css">
   </head>
 
   <body>
-    <nav data-visible="false">
-      <ul>
-        <li><a href="/">หน้าหลัก</a></li>
-        <li><a href="/main/">ดูเวลาทำการ</a></li>
-        <li><a href="/pricing/">ดูราคา</a></li>
-        <li><a href="/3d/">ปรินต์ 3D</a></li>
-        <li><a href="/about/">เกี่ยวกับร้านจิ้ม</a></li>
-        <!-- <li><a href="/contact/">ช่องทางติดต่อ</a></li> -->
-      </ul>
-    </nav>
+    <!-- Reusable Navigation Component -->
+    <site-nav></site-nav>
+
     <div class="burger">
       <svg
         xmlns="http://www.w3.org/2000/svg"
@@ -63,52 +85,102 @@
         <line x1="4" y1="18" x2="20" y2="18"></line>
       </svg>
     </div>
-    <div class="container">    
+
+    <div class="container">
       <div class="socialcontentcontainer">
-          <div class="breaker">
-        <svg
-          class="social-icon"
-          xmlns="http://www.w3.org/2000/svg"
-          xmlns:xlink="http://www.w3.org/1999/xlink"
-          aria-hidden="true"
-          role="img"
-          width="27px"
-          height="36px"
-          preserveAspectRatio="xMidYMid meet"
-          viewBox="0 0 384 512"
-        >
-          <path
-            d="M172.268 501.67C26.97 291.031 0 269.413 0 192C0 85.961 85.961 0 192 0s192 85.961 192 192c0 77.413-26.97 99.031-172.268 309.67c-9.535 13.774-29.93 13.773-39.464 0zM192 272c44.183 0 80-35.817 80-80s-35.817-80-80-80s-80 35.817-80 80s35.817 80 80 80z"
-            fill="currentColor"
-          />
-        </svg>
-          <h2 style="display: inline">&nbsp แผนที่</h2>
+        <!-- Map Section -->
+        <div class="breaker">
+          <svg
+            class="social-icon"
+            xmlns="http://www.w3.org/2000/svg"
+            aria-hidden="true"
+            role="img"
+            width="27px"
+            height="36px"
+            preserveAspectRatio="xMidYMid meet"
+            viewBox="0 0 384 512"
+          >
+            <path
+              d="M172.268 501.67C26.97 291.031 0 269.413 0 192C0 85.961 85.961 0 192 0s192 85.961 192 192c0 77.413-26.97 99.031-172.268 309.67c-9.535 13.774-29.93 13.773-39.464 0zM192 272c44.183 0 80-35.817 80-80s-35.817-80-80-80s-80 35.817-80 80s35.817 80 80 80z"
+              fill="currentColor"
+            />
+          </svg>
+          <h2 style="display: inline">
+            <span data-lang="th">&nbsp; แผนที่</span>
+            <span data-lang="en">&nbsp; Map</span>
+          </h2>
           <div class="socialcontent" data-tab="map">
-            <div id="mapapi" style="height: 20rem;">
-              <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3875.126344339499!2d100.4831309!3d13.7712535!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x30e299751b09af91%3A0xf9d8fd6edc88178!2z4LiI4Li04LmJ4Lih4Lib4Lij4Li04LiZ4LiV4LmM!5e0!3m2!1sen!2sth!4v1759387415221!5m2!1sen!2sth" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            <div id="mapapi" style="height: 20rem">
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3875.126344339499!2d100.4831309!3d13.7712535!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x30e299751b09af91%3A0xf9d8fd6edc88178!2z4LiI4Li04LmJ4Lih4Lib4Lij4Li04LiZ4LiV4LmM!5e0!3m2!1sen!2sth!4v1759387415221!5m2!1sen!2sth"
+                width="100%"
+                height="100%"
+                style="border: 0"
+                allowfullscreen=""
+                loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"
+              ></iframe>
             </div>
 
-            <textarea style="text-align: center; width:100%; padding:0.5rem; resize:none;" readonly id="map" class="content-text">176/5 ซ.สมเด็จพระปิ่นเกล้า 19 อรุณอมรินทร์ บางกอกน้อย กรุงเทพฯ 10700</textarea>
+            <!-- Address text -->
+            <textarea
+              style="
+                text-align: center;
+                width: 100%;
+                padding: 0.5rem;
+                resize: none;
+              "
+              readonly
+              id="map"
+              class="content-text"
+            >
+176/5 ซ.สมเด็จพระปิ่นเกล้า 19 อรุณอมรินทร์ บางกอกน้อย กรุงเทพฯ 10700</textarea
+            >
             <div class="buttonwrap">
-              <button id="copymap">Copy</button>
+              <button id="copymap">Copy Address</button>
               <button
-                onclick=" window.open('https://goo.gl/maps/ey1CJpm6z2xhcqJ57','_blank')"
+                onclick="
+                  window.open('https://goo.gl/maps/ey1CJpm6z2xhcqJ57', '_blank')
+                "
               >
                 Open in maps
               </button>
             </div>
-            <h2 style="color: red">ระวังหลง หน้าร้านอยู่ฝั่งซอย 21</h2>
-            <h2 style="color: black">ใน Grab ค้น "จิ้มปรินต์ ซอยสมเด็จพระปิ่นเกล้า 21" ได้เลย</h2>
-            <br>
-            
+
+            <h2 style="color: red; margin-top: 1rem">
+              <span data-lang="th">ระวังหลง หน้าร้านอยู่ฝั่งซอย 21</span>
+              <span data-lang="en">Watch out! Shop front is in Soi 21</span>
+            </h2>
+            <h2 style="color: black; margin-top: 1rem">
+              <span data-lang="th">เอาข้อความนี้ไปค้นใน Grab ได้เลย</span>
+              <span data-lang="en">Use text below to search in Grab app.</span>
+            </h2>
+            <textarea
+              style="text-align: center; padding: 0.5rem; resize: none"
+              readonly
+              id="grab"
+              class="content-text"
+            >
+จิ้มปรินต์ ซอยสมเด็จพระปิ่นเกล้า 21</textarea
+            >
+
+            <!-- Grab Search Name Button -->
+            <div class="buttonwrap" style="margin-top: 0.5rem">
+              <button id="copygrab">
+                <span data-lang="th">Copy</span>
+                <span data-lang="en">Copy</span>
+              </button>
+            </div>
+            <br />
           </div>
         </div>
+
+        <!-- Email Section -->
         <div class="breaker">
           <svg
             class="social-icon"
             data-for-tab="gmail"
             xmlns="http://www.w3.org/2000/svg"
-            xmlns:xlink="http://www.w3.org/1999/xlink"
             aria-hidden="true"
             role="img"
             width="36"
@@ -121,25 +193,37 @@
               fill="currentColor"
             />
           </svg>
-          <h2 style="display: inline">&nbsp อีเมล</h2>
+          <h2 style="display: inline">
+            <span data-lang="th">&nbsp; อีเมล</span>
+            <span data-lang="en">&nbsp; Email</span>
+          </h2>
           <div class="socialcontent" data-tab="email">
-            <input style="text-align: center; width:100%; padding:0.5rem;" readonly id="email" class="content-text" value="jimmprint.pinklao@gmail.com" />
+            <input
+              style="text-align: center; width: 100%; padding: 0.5rem"
+              readonly
+              id="email"
+              class="content-text"
+              value="jimmprint.pinklao@gmail.com"
+            />
             <div class="buttonwrap">
               <button id="copyemail">Copy</button>
               <button
-                onclick="window.open('mailto:jimmprint.pinklao@gmail.com','_blank')"
+                onclick="
+                  window.open('mailto:jimmprint.pinklao@gmail.com', '_blank')
+                "
               >
                 Open with email
               </button>
             </div>
           </div>
         </div>
+
+        <!-- Phone Section -->
         <div class="breaker">
           <svg
             class="social-icon"
             data-for-tab="phone"
             xmlns="http://www.w3.org/2000/svg"
-            xmlns:xlink="http://www.w3.org/1999/xlink"
             aria-hidden="true"
             role="img"
             width="36"
@@ -152,23 +236,32 @@
               fill="currentColor"
             />
           </svg>
-          <h2 style="display: inline">&nbsp โทรศัพท์</h2>
+          <h2 style="display: inline">
+            <span data-lang="th">&nbsp; โทรศัพท์</span>
+            <span data-lang="en">&nbsp; Phone</span>
+          </h2>
           <div class="socialcontent" data-tab="phone">
-            <input style="text-align: center; width:100%; padding:0.5rem;" readonly id="phone" class="content-text" value="0985975429"/>
+            <input
+              style="text-align: center; width: 100%; padding: 0.5rem"
+              readonly
+              id="phone"
+              class="content-text"
+              value="0985975429"
+            />
             <div class="buttonwrap">
               <button id="copyphone">Copy</button>
-              <button onclick="window.open('tel:66985975429','_blank')">
+              <button onclick="window.open('tel:66985975429', '_blank')">
                 Call
               </button>
             </div>
           </div>
         </div>
-          
+
+        <!-- Facebook Section -->
         <div class="breaker">
           <svg
             class="social-icon"
             xmlns="http://www.w3.org/2000/svg"
-            xmlns:xlink="http://www.w3.org/1999/xlink"
             aria-hidden="true"
             role="img"
             width="36"
@@ -181,28 +274,55 @@
               fill="currentColor"
             />
           </svg>
-          <h2 style="display: inline">&nbsp facebook</h2>
+          <h2 style="display: inline">&nbsp; Facebook</h2>
           <div class="socialcontent" data-tab="facebook">
-            <input style="text-align: center; width:100%; padding:0.5rem;" readonly id="facebook" class="content-text" value="facebook.com/jimmprint"/>
+            <input
+              style="text-align: center; width: 100%; padding: 0.5rem"
+              readonly
+              id="facebook"
+              class="content-text"
+              value="facebook.com/jimmprint"
+            />
             <div class="buttonwrap">
               <button id="copyfacebook">Copy</button>
               <button
-                onclick=" window.open('https://facebook.com/jimmprint','_blank')"
+                onclick="
+                  window.open('https://facebook.com/jimmprint', '_blank')
+                "
               >
                 Open
               </button>
             </div>
           </div>
         </div>
+
+        <!-- LINE Section -->
         <div class="breaker">
-          <svg class="social-icon" xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 24 24"><path fill="currentColor" d="M18.664 10.84a.526.526 0 0 1-.526.525h-1.462v.938h1.463a.525.525 0 1 1 0 1.049H16.15a.526.526 0 0 1-.522-.524V8.852c0-.287.235-.525.525-.525h1.988a.526.526 0 0 1-.002 1.05h-1.463v.938h1.463c.29 0 .524.237.524.525m-4.098 2.485a.54.54 0 0 1-.166.025a.515.515 0 0 1-.425-.208l-2.036-2.764v2.45a.525.525 0 0 1-1.047 0V8.852a.522.522 0 0 1 .52-.523c.162 0 .312.086.412.211l2.052 2.775V8.852c0-.287.235-.525.525-.525c.287 0 .525.238.525.525v3.976a.524.524 0 0 1-.36.497m-4.95.027a.526.526 0 0 1-.523-.524V8.852c0-.287.235-.525.525-.525c.289 0 .524.238.524.525v3.976a.527.527 0 0 1-.526.524m-1.53 0H6.099a.528.528 0 0 1-.525-.524V8.852c0-.287.238-.525.525-.525c.29 0 .525.238.525.525v3.45h1.464a.525.525 0 0 1 0 1.05m3.915-10.78c-5.513 0-10 3.643-10 8.118c0 4.01 3.558 7.369 8.363 8.007c.325.068.769.215.881.492c.1.25.066.638.032.9l-.137.85c-.037.25-.2.988.874.537c1.076-.449 5.764-3.398 7.864-5.812C21.314 14.089 22 12.477 22 10.69c0-4.475-4.488-8.118-10-8.118"/></svg>
-          <h2 style="display: inline">&nbsp line</h2>
+          <svg
+            class="social-icon"
+            xmlns="http://www.w3.org/2000/svg"
+            width="36"
+            height="36"
+            viewBox="0 0 24 24"
+          >
+            <path
+              fill="currentColor"
+              d="M18.664 10.84a.526.526 0 0 1-.526.525h-1.462v.938h1.463a.525.525 0 1 1 0 1.049H16.15a.526.526 0 0 1-.522-.524V8.852c0-.287.235-.525.525-.525h1.988a.526.526 0 0 1-.002 1.05h-1.463v.938h1.463c.29 0 .524.237.524.525m-4.098 2.485a.54.54 0 0 1-.166.025a.515.515 0 0 1-.425-.208l-2.036-2.764v2.45a.525.525 0 0 1-1.047 0V8.852a.522.522 0 0 1 .52-.523c.162 0 .312.086.412.211l2.052 2.775V8.852c0-.287.235-.525.525-.525c.287 0 .525.238.525.525v3.976a.524.524 0 0 1-.36.497m-4.95.027a.526.526 0 0 1-.523-.524V8.852c0-.287.235-.525.525-.525c.289 0 .524.238.524.525v3.976a.527.527 0 0 1-.526.524m-1.53 0H6.099a.528.528 0 0 1-.525-.524V8.852c0-.287.238-.525.525-.525c.29 0 .525.238.525.525v3.45h1.464a.525.525 0 0 1 0 1.05m3.915-10.78c-5.513 0-10 3.643-10 8.118c0 4.01 3.558 7.369 8.363 8.007c.325.068.769.215.881.492c.1.25.066.638.032.9l-.137.85c-.037.25-.2.988.874.537c1.076-.449 5.764-3.398 7.864-5.812C21.314 14.089 22 12.477 22 10.69c0-4.475-4.488-8.118-10-8.118"
+            />
+          </svg>
+          <h2 style="display: inline">&nbsp; LINE</h2>
           <div class="socialcontent" data-tab="line">
             <img src="/images/lineqr.png" alt="line" style="display: inline" />
-            <input style="text-align: center; width:100%; padding:0.5rem;" readonly id="line" class="content-text" value="@596ysfkn"/>
+            <input
+              style="text-align: center; width: 100%; padding: 0.5rem"
+              readonly
+              id="line"
+              class="content-text"
+              value="@596ysfkn"
+            />
             <div class="buttonwrap">
               <button id="copyline">Copy</button>
-              <button onclick=" window.open('https://lin.ee/zJuSeeB','_blank')">
+              <button onclick="window.open('https://lin.ee/zJuSeeB', '_blank')">
                 Open
               </button>
             </div>
@@ -210,42 +330,44 @@
         </div>
       </div>
     </div>
+
     <div class="noti">Copied!</div>
     <site-footer></site-footer>
+
+    <script>
+      function copyText(htmlInputElement) {
+        if (!htmlInputElement) return;
+        let elementText = htmlInputElement;
+        let noti = document.querySelector(".noti");
+
+        elementText.select();
+        document.execCommand("copy");
+
+        noti.classList.add("active");
+        setTimeout(() => {
+          noti.classList.remove("active");
+        }, 300);
+      }
+
+      document.querySelector("#copymap").onclick = function () {
+        copyText(document.querySelector("#map"));
+      };
+      document.querySelector("#copygrab").onclick = function () {
+        copyText(document.querySelector("#grab"));
+      };
+
+      document.querySelector("#copyemail").onclick = function () {
+        copyText(document.querySelector("#email"));
+      };
+      document.querySelector("#copyphone").onclick = function () {
+        copyText(document.querySelector("#phone"));
+      };
+      document.querySelector("#copyfacebook").onclick = function () {
+        copyText(document.querySelector("#facebook"));
+      };
+      document.querySelector("#copyline").onclick = function () {
+        copyText(document.querySelector("#line"));
+      };
+    </script>
   </body>
-  <script>
-function copyText(htmlInputElement) {
-      
-      if (!htmlInputElement) {
-        return;
-      }
-      let elementText = htmlInputElement;
-      let noti = document.querySelector(".noti");
-      
-      elementText.select();
-      document.execCommand("copy");
-
-      noti.classList.add("active");
-      function remove() {
-        noti.classList.remove("active");
-      }
-      setTimeout(remove, 300);
-    }
-
-    document.querySelector("#copymap").onclick = function () {
-      copyText(document.querySelector("#map"));
-    };
-     document.querySelector("#copyemail").onclick = function () {
-      copyText(document.querySelector("#email"));
-    };
-     document.querySelector("#copyphone").onclick = function () {
-      copyText(document.querySelector("#phone"));
-    };
-     document.querySelector("#copyfacebook").onclick = function () {
-      copyText(document.querySelector("#facebook"));
-    };
-     document.querySelector("#copyline").onclick = function () {
-      copyText(document.querySelector("#line"));
-    };
-  </script>
 </html>
