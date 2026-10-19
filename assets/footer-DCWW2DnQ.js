@@ -1,21 +1,21 @@
-(function(){const o=document.createElement("link").relList;if(o&&o.supports&&o.supports("modulepreload"))return;for(const t of document.querySelectorAll('link[rel="modulepreload"]'))r(t);new MutationObserver(t=>{for(const e of t)if(e.type==="childList")for(const a of e.addedNodes)a.tagName==="LINK"&&a.rel==="modulepreload"&&r(a)}).observe(document,{childList:!0,subtree:!0});function c(t){const e={};return t.integrity&&(e.integrity=t.integrity),t.referrerPolicy&&(e.referrerPolicy=t.referrerPolicy),t.crossOrigin==="use-credentials"?e.credentials="include":t.crossOrigin==="anonymous"?e.credentials="omit":e.credentials="same-origin",e}function r(t){if(t.ep)return;t.ep=!0;const e=c(t);fetch(t.href,e)}})();class p extends HTMLElement{connectedCallback(){const o=window.location.pathname,t=[{path:"/",th:"หน้าหลัก",en:"Home"},{path:"/main/",th:"ดูเวลาทำการ",en:"Opening Hours"},{path:"/pricing/",th:"ดูราคา",en:"Pricing"},{path:"/3d/",th:"ปรินต์ 3D",en:"3D Printing"},{path:"/about/",th:"เกี่ยวกับร้านจิ้ม",en:"About Jimm"},{path:"/contact/",th:"ช่องทางติดต่อ",en:"Contact Us"}].filter(n=>{const l=o.replace(/\/$/,"")||"/",i=n.path.replace(/\/$/,"")||"/";return l!==i}).map(n=>`
+(function(){const l=document.createElement("link").relList;if(l&&l.supports&&l.supports("modulepreload"))return;for(const t of document.querySelectorAll('link[rel="modulepreload"]'))c(t);new MutationObserver(t=>{for(const e of t)if(e.type==="childList")for(const r of e.addedNodes)r.tagName==="LINK"&&r.rel==="modulepreload"&&c(r)}).observe(document,{childList:!0,subtree:!0});function p(t){const e={};return t.integrity&&(e.integrity=t.integrity),t.referrerPolicy&&(e.referrerPolicy=t.referrerPolicy),t.crossOrigin==="use-credentials"?e.credentials="include":t.crossOrigin==="anonymous"?e.credentials="omit":e.credentials="same-origin",e}function c(t){if(t.ep)return;t.ep=!0;const e=p(t);fetch(t.href,e)}})();class d extends HTMLElement{connectedCallback(){const l=window.location.pathname,t=[{path:"/",th:"หน้าหลัก",en:"Home"},{path:"/main/",th:"ดูเวลาทำการ",en:"Opening Hours"},{path:"/pricing/",th:"ราคาแผ่นใหญ่",en:"Large Prints Pricing"},{path:"/pricing-small/",th:"ราคาแผ่นเล็ก",en:"Small Prints Pricing"},{path:"/3d/",th:"ปรินต์ 3D",en:"3D Printing"},{path:"/about/",th:"เกี่ยวกับร้านจิ้ม",en:"About Jimm"},{path:"/contact/",th:"ช่องทางติดต่อ",en:"Contact Us"}].filter(n=>{const a=l.replace(/\/$/,"")||"/",i=n.path.replace(/\/$/,"")||"/";return a!==i}).map(n=>`
         <li>
           <a href="${n.path}">
             <span data-lang="th">${n.th}</span>
             <span data-lang="en">${n.en}</span>
           </a>
         </li>
-      `).join("");this.innerHTML=`
+      `).join(""),e='<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 60 30" width="32" height="24" style="display: block; border-radius: 2px;"><clipPath id="gb-s"><path d="M0 0v30h60V0z"/></clipPath><clipPath id="gb-t"><path d="M30 15h30v15zM30 15H0V0zM30 15H0v15zM30 15h30V0z"/></clipPath><g clip-path="url(#gb-s)"><path d="M0 0v30h60V0z" fill="#012169"/><path d="M0 0l60 30M60 0L0 30" stroke="#fff" stroke-width="6"/><path d="M0 0l60 30M60 0L0 30" clip-path="url(#gb-t)" stroke="#C8102E" stroke-width="4"/><path d="M30 0v30M0 15h60" stroke="#fff" stroke-width="10"/><path d="M30 0v30M0 15h60" stroke="#C8102E" stroke-width="6"/></g></svg>',r='<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 600" width="32" height="24" style="display: block; border-radius: 2px;"><rect width="900" height="600" fill="#ED1C24"/><rect y="100" width="900" height="400" fill="#fff"/><rect y="200" width="900" height="200" fill="#241D4F"/></svg>';this.innerHTML=`
       <nav data-visible="false">
         <ul>
           ${t}
         </ul>
-        <button type="button" class="lang-switch-btn nav-lang-btn" aria-label="Switch Language">
-          <span data-lang="th" style="font-size: 1.5rem; line-height: 1; display: inline-block;">🇬🇧</span>
-          <span data-lang="en" style="font-size: 1.5rem; line-height: 1; display: inline-block;">🇹🇭</span>
+        <button type="button" class="lang-switch-btn nav-lang-btn" aria-label="Switch Language" style="padding: 2px 4px; border: none; cursor: pointer; display: inline-flex; align-items: center; justify-content: center; border-radius: 4px;">
+          <span data-lang="th" style="display: inline-flex; align-items: center;">${e}</span>
+          <span data-lang="en" style="display: inline-flex; align-items: center;">${r}</span>
         </button>
       </nav>
-    `;const e=this.querySelector("nav"),a=document.querySelector(".burger"),h=this.querySelector(".lang-switch-btn");a&&e&&(a.onclick=n=>{n.stopPropagation();const l=e.getAttribute("data-visible");e.setAttribute("data-visible",l==="false"?"true":"false")}),h&&(h.onclick=n=>{n.stopPropagation();const i=(document.documentElement.getAttribute("data-lang")||"th")==="th"?"en":"th";document.documentElement.setAttribute("data-lang",i),localStorage.setItem("userLang",i),window.dispatchEvent(new CustomEvent("langchange",{detail:{lang:i}}))}),document.addEventListener("click",n=>{const l=this.contains(n.target),i=a&&a.contains(n.target);e.getAttribute("data-visible")==="true"&&!l&&!i&&e.setAttribute("data-visible","false")})}}customElements.define("site-nav",p);class g extends HTMLElement{connectedCallback(){this.innerHTML=`
+    `;const s=this.querySelector("nav"),o=document.querySelector(".burger"),g=this.querySelector(".lang-switch-btn");o&&s&&(o.onclick=n=>{n.stopPropagation();const a=s.getAttribute("data-visible");s.setAttribute("data-visible",a==="false"?"true":"false")}),g&&(g.onclick=n=>{n.stopPropagation();const i=(document.documentElement.getAttribute("data-lang")||"th")==="th"?"en":"th";document.documentElement.setAttribute("data-lang",i),localStorage.setItem("userLang",i),window.dispatchEvent(new CustomEvent("langchange",{detail:{lang:i}}))}),document.addEventListener("click",n=>{const a=this.contains(n.target),i=o&&o.contains(n.target);s.getAttribute("data-visible")==="true"&&!a&&!i&&s.setAttribute("data-visible","false")})}}customElements.define("site-nav",d);class u extends HTMLElement{connectedCallback(){this.innerHTML=`
         <footer>
           <ul class="links">
             <li>
@@ -69,4 +69,4 @@
             Copyright &copy; 2026, Jimm Print. All Rights Reserved
           </p>
         </footer>
-      `}}customElements.define("site-footer",g);
+      `}}customElements.define("site-footer",u);
