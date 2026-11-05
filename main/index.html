@@ -57,7 +57,8 @@
       href="https://fonts.googleapis.com/css2?family=Maitree:wght@400;500;700&family=Prompt:wght@400;500;700&display=swap"
       rel="stylesheet"
     />
-    <script type="module" crossorigin src="/assets/footer-q6ABgMIE.js"></script>
+    <script type="module" crossorigin src="/assets/mainPage-B2q5IhuL.js"></script>
+    <link rel="modulepreload" crossorigin href="/assets/footer-q6ABgMIE.js">
     <link rel="stylesheet" crossorigin href="/assets/footer-D9OE8V8Q.css">
   </head>
   <body>
@@ -87,8 +88,13 @@
     <div class="container">
       <div class="content">
         <h1 class="daymessage"></h1>
+        <h2
+          style="text-align: center; color: var(--clr-accent-400)"
+          class="submessage"
+        ></h2>
+        <p style="text-align: center" class="extraparg"></p>
 
-        <h2 style="text-align: center">
+        <!-- <h2 style="text-align: center">
           <span data-lang="th">
             อันนี้เป็นข้อความอัตโนมัติ<br />ถ้าจะเอาชัวร์จิ้ม<a
               href="https://goo.gl/maps/ey1CJpm6z2xhcqJ57"
@@ -104,7 +110,7 @@
               >here</a
             >
           </span>
-        </h2>
+        </h2> -->
 
         <a
           class="timetabletrigger"
@@ -209,63 +215,6 @@
     </div>
 
     <site-footer></site-footer>
-
-    <script>
-      const dayMessage = document.querySelector(".daymessage");
-      const today = new Date().getDay();
-
-      const messages = {
-        0: {
-          th: "วันนี้วันอาทิตย์<br>เปิด 20:00-00:00",
-          en: "Today is Sunday<br>Open 20:00-00:00",
-        },
-        1: {
-          th: "วันนี้วันจันทร์<br>เปิด 20:00-00:00",
-          en: "Today is Monday<br>Open 20:00-00:00",
-        },
-        2: {
-          th: "วันนี้วันอังคาร<br>เปิด 20:00-00:00",
-          en: "Today is Tuesday<br>Open 20:00-00:00",
-        },
-        3: {
-          th: "วันนี้วันพุธ<br>เปิด 20:00-00:00",
-          en: "Today is Wednesday<br>Open 20:00-00:00",
-        },
-        4: {
-          th: "วันนี้วันพฤหัสฯ<br>เปิด 20:00-00:00",
-          en: "Today is Thursday<br>Open 20:00-00:00",
-        },
-        5: {
-          th: "วันนี้วันศุกร์<br>เปิด 20:00-00:00",
-          en: "Today is Friday<br>Open 20:00-00:00",
-        },
-        6: {
-          th: "วันนี้วันเสาร์<br>ร้านหยุด",
-          en: "Today is Saturday<br>Closed",
-        },
-      };
-
-      const msg = messages[today] || {
-        th: "วันนี้วันร้านปิด T_T",
-        en: "Shop is closed today T_T",
-      };
-
-      dayMessage.innerHTML = `
-        <span data-lang="th">${msg.th}</span>
-        <span data-lang="en">${msg.en}</span>
-      `;
-
-      function toggleTimetable() {
-        let timetablediv = document.querySelector(".timetablediv");
-        let visibility = timetablediv.getAttribute("data-visible");
-        timetablediv.setAttribute(
-          "data-visible",
-          visibility === "false" ? "true" : "false",
-        );
-      }
-
-      document.querySelector(".timetabletrigger").onclick = toggleTimetable;
-      document.querySelector(".btn-close-timetable").onclick = toggleTimetable;
-    </script>
+
   </body>
 </html>
