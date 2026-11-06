@@ -57,9 +57,9 @@
       href="https://fonts.googleapis.com/css2?family=Maitree:wght@400;500;700&family=Prompt:wght@400;500;700&display=swap"
       rel="stylesheet"
     />
-    <script type="module" crossorigin src="/assets/mainPage-CMLQpyfH.js"></script>
-    <link rel="modulepreload" crossorigin href="/assets/footer-q6ABgMIE.js">
-    <link rel="stylesheet" crossorigin href="/assets/footer-D9OE8V8Q.css">
+    <script type="module" crossorigin src="/assets/mainPage-B3FGp6bS.js"></script>
+    <link rel="modulepreload" crossorigin href="/assets/footer-B5c4Ovpg.js">
+    <link rel="stylesheet" crossorigin href="/assets/footer-DoddNaY5.css">
   </head>
   <body>
     <!-- Reusable Navigation Component -->
@@ -85,32 +85,28 @@
       </svg>
     </div>
 
-    <div class="container">
+<div class="container">
       <div class="content">
-        <h1 class="daymessage"></h1>
-        <h2
-          style="text-align: center; color: var(--clr-accent-400)"
-          class="submessage"
-        ></h2>
-        <p style="text-align: center" class="extraparg"></p>
+        
+        <!-- START: Skeleton Loader & Dynamic Message Wrapper -->
+        <div class="message-container">
+          <!-- Skeleton Loader (Shown while fetching CSV) -->
+          <div class="skeleton-loader">
+            <div class="skeleton-line title-skeleton"></div>
+            <div class="skeleton-line sub-skeleton"></div>
+          </div>
 
-        <!-- <h2 style="text-align: center">
-          <span data-lang="th">
-            อันนี้เป็นข้อความอัตโนมัติ<br />ถ้าจะเอาชัวร์จิ้ม<a
-              href="https://goo.gl/maps/ey1CJpm6z2xhcqJ57"
-              style="color: var(--clr-accent-400)"
-              >ตรงนี้</a
-            >
-          </span>
-          <span data-lang="en">
-            This is an automated status.<br />To double check, click
-            <a
-              href="https://goo.gl/maps/ey1CJpm6z2xhcqJ57"
-              style="color: var(--clr-accent-400)"
-              >here</a
-            >
-          </span>
-        </h2> -->
+          <!-- Real Content (Hidden until fetch finishes) -->
+          <div class="actual-content" style="opacity: 0; transition: opacity 0.3s ease;">
+            <h1 class="daymessage"></h1>
+            <h2
+              style="text-align: center; color: var(--clr-accent-400)"
+              class="submessage"
+            ></h2>
+            <p style="text-align: center" class="extraparg"></p>
+          </div>
+        </div>
+        <!-- END: Skeleton Loader & Dynamic Message Wrapper -->
 
         <a
           class="timetabletrigger"
